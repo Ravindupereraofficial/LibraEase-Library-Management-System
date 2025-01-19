@@ -2,7 +2,11 @@ package edu.icet.librarymanagementsystem.controller.login;
 
 import com.jfoenix.controls.JFXTextField;
 import javafx.event.ActionEvent;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.sql.SQLException;
 
 public class LoginFormController {
@@ -15,5 +19,11 @@ public class LoginFormController {
     }else {
         System.out.println("not found");
     }
+    }
+
+    public void btnSignupOnAction(ActionEvent actionEvent) throws IOException {
+        Stage stage=new Stage();
+        stage.setScene(new Scene(FXMLLoader.load(getClass().getResource("/view/Signup_Form.fxml"))));
+        stage.show();
     }
 }
