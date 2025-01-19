@@ -8,5 +8,10 @@ public class LoginFormController {
     public JFXTextField passwordTextField;
 
     public void btnLoginOnAction(ActionEvent actionEvent) {
+    if (LoginController.getInstance().authenticateUser(emailTextField.getText(),passwordTextField.getText())){
+        System.out.println("user have");
+    }else {
+        System.out.println("not found");
+    }
     }
 }
