@@ -4,11 +4,16 @@
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.librarymanagementsystem.controller.login.LoginFormController">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.librarymanagementsystem.controller.login.LoginFormController"
+            style="-fx-background-color: linear-gradient(to bottom, #1e3c72, #2a5298);">
    <children>
-      <JFXTextField fx:id="emailTextField" layoutX="330.0" layoutY="79.0" promptText="Email" />
-      <JFXTextField fx:id="passwordTextField" layoutX="337.0" layoutY="153.0" promptText="password" />
-      <JFXButton layoutX="285.0" layoutY="272.0" onAction="#btnLoginOnAction" text="Login" />
-      <JFXButton layoutX="405.0" layoutY="314.0" onAction="#btnSignupOnAction" text="Signup" />
+      <JFXTextField fx:id="emailTextField" layoutX="190.0" layoutY="120.0" promptText="Email"
+                    style="-fx-text-fill: white; -fx-prompt-text-fill: rgba(255, 255, 255, 0.5); -jfx-focus-color: #4CAF50; -jfx-unfocus-color: rgba(255, 255, 255, 0.5); -fx-font-size: 14px; -fx-background-radius: 5px; -fx-background-color: transparent;" />
+      <JFXTextField fx:id="passwordTextField" layoutX="190.0" layoutY="180.0" promptText="Password"
+                    style="-fx-text-fill: white; -fx-prompt-text-fill: rgba(255, 255, 255, 0.5); -jfx-focus-color: #4CAF50; -jfx-unfocus-color: rgba(255, 255, 255, 0.5); -fx-font-size: 14px; -fx-background-radius: 5px; -fx-background-color: transparent;" />
+      <JFXButton layoutX="220.0" layoutY="260.0" onAction="#btnLoginOnAction" text="Login"
+                 style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 16px; -fx-background-radius: 20px; -fx-pref-width: 100px; -fx-pref-height: 40px; -fx-cursor: hand;" />
+      <JFXButton layoutX="340.0" layoutY="260.0" onAction="#btnSignupOnAction" text="Signup"
+                 style="-fx-background-color: #4CAF50; -fx-text-fill: white; -fx-font-size: 16px; -fx-background-radius: 20px; -fx-pref-width: 100px; -fx-pref-height: 40px; -fx-cursor: hand;" />
    </children>
 </AnchorPane>

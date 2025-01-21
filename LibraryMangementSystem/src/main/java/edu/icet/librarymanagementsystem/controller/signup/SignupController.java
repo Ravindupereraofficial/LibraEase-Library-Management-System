@@ -3,10 +3,7 @@ package edu.icet.librarymanagementsystem.controller.signup;
 import edu.icet.librarymanagementsystem.db.DBConnection;
 import edu.icet.librarymanagementsystem.model.User;
 
-import java.sql.Connection;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Statement;
+import java.sql.*;
 
 public class SignupController implements SignupService{
     private static  SignupController innstance;
@@ -24,8 +21,15 @@ public class SignupController implements SignupService{
     }
 
     @Override
-    public boolean registerUser(User newUser) {
-        return false;
+    public boolean registerUser(User newUser) throws SQLException {
+        PreparedStatement prepareStm = DBConnection.getInstance().getConnection().prepareStatement(
+                "INSERT INTO users (id,username, email, password) VALUES (?, ?, ?, ?)"
+        );
+        prepareStm.setString(1, newUser.getId());
+        prepareStm.setString(2, newUser.getUsername());
+        prepareStm.setString(3, newUser.getEmail());
+        prepareStm.setString(4, newUser.getPassword());
+        return prepareStm.executeUpdate() > 0;
     }
 
     @Override
