@@ -1,0 +1,46 @@
+Library Management System – Repository Description
+📚 Library Management System is a JavaFX-based application designed to efficiently manage library operations, including book borrowing, fine management, membership tracking, and real-time book availability monitoring. The system follows a Layered Architecture, ensuring scalability, maintainability, and modular development.
+
+🏗 Project Structure (Layered Architecture)
+The system is structured into the following layers:
+
+1️⃣ Presentation Layer (UI) – Developed using JavaFX, providing an intuitive and responsive graphical user interface.
+2️⃣ Service Layer (Business Logic) – Handles core functionalities like borrowing books, calculating fines, and updating availability.
+3️⃣ Data Access Layer (DAO) – Manages database operations using MySQL, ensuring efficient data retrieval and storage.
+4️⃣ Database Layer – MySQL database storing books, members, transactions, and fines.
+
+🚀 Key Features:
+✅ Book Management – Add, update, categorize, and check availability of books.
+✅ Borrow & Return System – Track book transactions and enforce return policies.
+✅ Fine Management – Auto-calculate overdue fines and process payments.
+✅ Membership Handling – Register, manage, and analyze member activity.
+✅ Comprehensive Reports – Generate insights on book usage, fines, and top borrowers.
+
+📂 Repository Contents:
+/src – Contains all Java classes structured by layer (Controller, Service, DAO, Models).
+/resources – Includes UI layouts (.fxml), stylesheets, and icons.
+/db – SQL scripts for database schema and sample data.
+/docs – System documentation, report templates, and API references.
+🛠 Technologies Used:
+🔹 Java (JavaFX) – GUI Development
+🔹 MySQL – Database Management
+🔹 JDBC (DAO Pattern) – Data Handling
+🔹 FXML & CSS – UI Styling
+🔹 Maven/Gradle – Dependency Management
+
+📌 Installation & Setup
+1️⃣ Clone this repository:
+
+bash
+Copy
+Edit
+git clone https://github.com/yourusername/library-management-system.git
+2️⃣ Configure the database (library.sql in /db).
+3️⃣ Import the project into IntelliJ IDEA or Eclipse.
+4️⃣ Run the Main.java file to launch the system.
+
+💡 Contributing
+Pull requests are welcome! Feel free to open issues for feature requests or bug fixes.
+
+📜 License
+This project is licensed under the MIT License – free to use and modify!
