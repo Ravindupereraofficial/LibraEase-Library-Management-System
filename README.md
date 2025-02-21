@@ -1,4 +1,4 @@
-# Library Management System
+# LibraEase | Library Management System
 
 📚 **Library Management System** is a **JavaFX-based application** designed to streamline library operations, including book borrowing, fine management, membership tracking, and real-time book availability monitoring. The system follows a **Layered Architecture**, ensuring scalability, maintainability, and modular development.
 
