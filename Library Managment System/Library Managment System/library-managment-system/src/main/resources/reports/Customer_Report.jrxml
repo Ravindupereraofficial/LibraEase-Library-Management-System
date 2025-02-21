@@ -1,0 +1,82 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="Customer_Report" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3264dd9e-8075-4231-b752-3645e8b56c16">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="CustomerReport"/>
+	<query language="SQL"><![CDATA[SELECT * FROM librarymembers;]]></query>
+	<field name="MemberID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="MemberID"/>
+		<property name="com.jaspersoft.studio.field.label" value="MemberID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="librarymembers"/>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="librarymembers"/>
+	</field>
+	<field name="ContactInfo" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="ContactInfo"/>
+		<property name="com.jaspersoft.studio.field.label" value="ContactInfo"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="librarymembers"/>
+	</field>
+	<field name="MembershipDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="MembershipDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="MembershipDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="librarymembers"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="65" splitType="Stretch">
+		<element kind="staticText" uuid="51f46d6a-e44d-4796-bfb8-970c83805b06" x="137" y="20" width="280" height="30" fontSize="22.0">
+			<text><![CDATA[BookBrigde Member Report]]></text>
+		</element>
+	</title>
+	<pageHeader height="27" splitType="Stretch">
+		<element kind="staticText" uuid="0e6cff1d-ee99-4122-ad40-54e542268830" x="190" y="0" width="170" height="20" fontSize="13.0">
+			<text><![CDATA[22/3 , Galle Road , Panadura]]></text>
+		</element>
+	</pageHeader>
+	<columnHeader height="31" splitType="Stretch">
+		<element kind="staticText" uuid="1d6fe1bc-83f0-4ec1-9ca7-bedd8e1fae61" x="70" y="1" width="110" height="20" fontSize="14.0" hTextAlign="Center">
+			<text><![CDATA[MemberID]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b0b7b622-6cec-4356-b77f-3a76da7cd00a"/>
+		</element>
+		<element kind="staticText" uuid="cc699a3d-2224-4138-b42e-ce8a08f7ab38" x="170" y="1" width="110" height="21" fontSize="14.0" hTextAlign="Center">
+			<text><![CDATA[Name]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="39f08df6-8245-4fc7-9612-76a6e30c93ad"/>
+		</element>
+		<element kind="staticText" uuid="c1115922-fa07-4ca9-8e7b-a67a5317a94c" x="270" y="1" width="110" height="21" fontSize="14.0" hTextAlign="Center">
+			<text><![CDATA[ContactInfo]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cdb43846-9ec1-4beb-9c21-b6c0d9daedd4"/>
+		</element>
+		<element kind="staticText" uuid="7dcd4d66-1048-4303-bd3a-437644bd6524" x="370" y="1" width="127" height="21" fontSize="14.0">
+			<text><![CDATA[MembershipDate]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b95f0a41-1d4f-41af-bef6-6cb08dff5c9c"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="25" splitType="Stretch">
+			<element kind="textField" uuid="cf2c88e0-7be0-488a-a924-db0e828923a4" x="70" y="1" width="110" height="19" hTextAlign="Center">
+				<expression><![CDATA[$F{MemberID}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b0b7b622-6cec-4356-b77f-3a76da7cd00a"/>
+			</element>
+			<element kind="textField" uuid="f36c1789-94de-4263-bfbb-33250ab57f69" x="170" y="0" width="110" height="20" hTextAlign="Center">
+				<expression><![CDATA[$F{Name}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="39f08df6-8245-4fc7-9612-76a6e30c93ad"/>
+			</element>
+			<element kind="textField" uuid="3b847df4-f039-4fe8-84df-dc3e160c4a02" x="270" y="0" width="110" height="20" hTextAlign="Center">
+				<expression><![CDATA[$F{ContactInfo}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cdb43846-9ec1-4beb-9c21-b6c0d9daedd4"/>
+			</element>
+			<element kind="textField" uuid="9e946909-ba7c-4424-9a3e-6fde57888009" x="370" y="1" width="127" height="19" hTextAlign="Center">
+				<expression><![CDATA[$F{MembershipDate}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b95f0a41-1d4f-41af-bef6-6cb08dff5c9c"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="61" splitType="Stretch"/>
+	<pageFooter height="42" splitType="Stretch">
+		<element kind="staticText" uuid="d97a8769-487d-4e30-b4d5-e11ac2105824" x="240" y="19" width="80" height="17" fontSize="13.0">
+			<text><![CDATA[Thank You !]]></text>
+		</element>
+	</pageFooter>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

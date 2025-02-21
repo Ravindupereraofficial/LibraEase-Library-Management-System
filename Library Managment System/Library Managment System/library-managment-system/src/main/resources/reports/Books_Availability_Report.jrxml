@@ -1,0 +1,68 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="Books_Availability_Report" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="0fedb638-cf97-428f-82dc-2ee7715fb39e">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (8)"/>
+	<query language="SQL"><![CDATA[SELECT AvailabilityStatus, COUNT(*) AS TotalBooks
+FROM books
+GROUP BY AvailabilityStatus;
+]]></query>
+	<field name="AvailabilityStatus" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="AvailabilityStatus"/>
+		<property name="com.jaspersoft.studio.field.label" value="AvailabilityStatus"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="books"/>
+	</field>
+	<field name="TotalBooks" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="TotalBooks"/>
+		<property name="com.jaspersoft.studio.field.label" value="TotalBooks"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="69" splitType="Stretch">
+		<element kind="staticText" uuid="c2268c26-8874-4d1b-9232-aa4708711722" x="130" y="10" width="340" height="50" fontSize="25.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[Books Availability Report]]></text>
+		</element>
+	</title>
+	<pageHeader height="30" splitType="Stretch">
+		<element kind="staticText" uuid="1139ccf9-98de-4d53-846a-43dbeb60ed72" x="0" y="0" width="550" height="20">
+			<text><![CDATA[This report provides an overview of the number of available and borrowed books, helping track the library's inventory.]]></text>
+		</element>
+	</pageHeader>
+	<columnHeader height="35" splitType="Stretch">
+		<element kind="staticText" uuid="7a0811b1-e31c-44be-83c4-9269a51c3714" x="180" y="0" width="100" height="30">
+			<text><![CDATA[AvailabilityStatus]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="500867d0-44c7-4aaa-a911-8fab6777dcc9"/>
+		</element>
+		<element kind="staticText" uuid="86a54353-f38d-44c6-a686-718f763f8fb3" x="280" y="0" width="100" height="30">
+			<text><![CDATA[TotalBooks]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e7abc955-64e9-4d2f-a196-9c8088f56589"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<element kind="textField" uuid="9d684da3-80b0-4800-bfc0-235b6dcfa6f4" x="180" y="0" width="100" height="20">
+				<expression><![CDATA[$F{AvailabilityStatus}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="500867d0-44c7-4aaa-a911-8fab6777dcc9"/>
+			</element>
+			<element kind="textField" uuid="436589e6-553e-41a6-babd-69e09c40c08d" x="280" y="0" width="100" height="20">
+				<expression><![CDATA[$F{TotalBooks}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e7abc955-64e9-4d2f-a196-9c8088f56589"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="66" splitType="Stretch">
+		<element kind="staticText" uuid="57bfee27-ea89-491a-b94a-78c88b23f8a7" x="0" y="0" width="560" height="46">
+			<text><![CDATA[Thank you for using our Library Management System! We strive to enhance your reading experience by providing efficient services and insightful reports. If you have any questions or suggestions, feel free to reach out to the library administration.]]></text>
+		</element>
+		<element kind="staticText" uuid="c71df263-f1bb-4150-b306-749c06a01ed4" x="0" y="36" width="280" height="30">
+			<text><![CDATA[ Thank You Message
+📖 Library Management System– Comprehensive Report
+
+]]></text>
+		</element>
+	</columnFooter>
+	<pageFooter height="54" splitType="Stretch">
+		<element kind="staticText" uuid="0ce8c1f3-dd47-488e-aa9b-74cc65a6ff94" x="160" y="24" width="280" height="30">
+			<text><![CDATA[All Right Reserved For Library Management System @2025]]></text>
+		</element>
+	</pageFooter>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

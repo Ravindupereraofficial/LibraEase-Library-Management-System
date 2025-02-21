@@ -1,0 +1,80 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="Active_Borrowers" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="49508d77-4038-4a40-abe6-2be6938bcedd">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (10)"/>
+	<query language="SQL"><![CDATA[SELECT lm.MemberID, lm.Name, COUNT(br.BorrowID) AS TotalBorrows
+FROM borrowrecords br
+JOIN librarymembers lm ON br.MemberID = lm.MemberID
+GROUP BY lm.MemberID, lm.Name
+ORDER BY TotalBorrows DESC
+LIMIT 10;
+]]></query>
+	<field name="MemberID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="MemberID"/>
+		<property name="com.jaspersoft.studio.field.label" value="MemberID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="librarymembers"/>
+	</field>
+	<field name="Name" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Name"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="librarymembers"/>
+	</field>
+	<field name="TotalBorrows" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="TotalBorrows"/>
+		<property name="com.jaspersoft.studio.field.label" value="TotalBorrows"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="64" splitType="Stretch">
+		<element kind="staticText" uuid="0265740c-3268-4495-a85f-e076dccc8418" x="-10" y="10" width="570" height="40" fontSize="19.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[Active Borrowers (Who Borrowed the Most Books)]]></text>
+		</element>
+	</title>
+	<pageHeader splitType="Stretch"/>
+	<columnHeader height="36" splitType="Stretch">
+		<element kind="staticText" uuid="c903f0f6-d4c7-4732-af08-b29b5ce61ff6" x="130" y="-4" width="100" height="30" bold="true" hTextAlign="Center">
+			<text><![CDATA[MemberID]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d58c80e0-89f9-44b0-827d-d249013db4e2"/>
+		</element>
+		<element kind="staticText" uuid="b4d89c33-e39c-4850-8545-58685c3d58e7" x="230" y="-4" width="100" height="30" bold="true" hTextAlign="Center">
+			<text><![CDATA[Name]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2a985768-e314-485d-a5da-8dd77501f18d"/>
+		</element>
+		<element kind="staticText" uuid="ad20f5f1-36fd-428e-afe6-dccea8156e18" x="330" y="-4" width="100" height="30" bold="true" hTextAlign="Center">
+			<text><![CDATA[TotalBorrows]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b3cce3a1-a142-41cd-b9a7-49e56091f79b"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="31" splitType="Stretch">
+			<element kind="textField" uuid="1d5141af-7ecb-4b92-a908-7619f53c5c90" x="130" y="-4" width="100" height="20" hTextAlign="Center">
+				<expression><![CDATA[$F{MemberID}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="d58c80e0-89f9-44b0-827d-d249013db4e2"/>
+			</element>
+			<element kind="textField" uuid="a41a92f3-290f-4be9-b33f-526ec4b59a4e" x="230" y="-4" width="100" height="20" hTextAlign="Center">
+				<expression><![CDATA[$F{Name}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="2a985768-e314-485d-a5da-8dd77501f18d"/>
+			</element>
+			<element kind="textField" uuid="51fccd12-ee3a-4477-866c-e8d74164bf66" x="330" y="-4" width="100" height="20" hTextAlign="Center">
+				<expression><![CDATA[$F{TotalBorrows}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="b3cce3a1-a142-41cd-b9a7-49e56091f79b"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="89" splitType="Stretch">
+		<element kind="staticText" uuid="16eff8f4-e50c-45e2-bd24-f32a3dd3b506" x="0" y="10" width="545" height="59">
+			<text><![CDATA[Thank you for using our Library Management System! We strive to enhance your reading experience by providing efficient services and insightful reports. If you have any questions or suggestions, feel free to reach out to the library administration.]]></text>
+		</element>
+		<element kind="staticText" uuid="06dcbf8c-870b-4dfc-ab15-098a0c90c605" x="0" y="50" width="228" height="30">
+			<text><![CDATA[ Thank You Message
+📖 Library Management System– Comprehensive Report
+
+]]></text>
+		</element>
+	</columnFooter>
+	<pageFooter height="55" splitType="Stretch">
+		<element kind="staticText" uuid="1b435a08-97b4-4577-ab4f-168acec9f409" x="160" y="20" width="273" height="30">
+			<text><![CDATA[All Right Reserved For Library Management System @2025]]></text>
+		</element>
+	</pageFooter>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>

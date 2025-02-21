@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="700.0" prefWidth="720.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.librarymanagmentsystem.controller.reports.ReoprtsFormController">
+   <children>
+      <Label layoutX="251.0" layoutY="40.0" prefHeight="32.0" prefWidth="309.0" style="-fx-text-fill: #2c3e50;" text="📖 Book Bridge Reports">
+         <font>
+            <Font name="Poppins Bold" size="22.0" />
+         </font>
+      </Label>
+
+      <ImageView fitHeight="120.0" fitWidth="160.0" layoutX="293.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/FEATURESPAGE.gif" />
+         </image>
+      </ImageView>
+
+      <Button layoutX="265.0" layoutY="220.0" mnemonicParsing="false" onAction="#btnActiveBorrowersReportOnAction" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #3498db; -fx-text-fill: white; -fx-font-size: 15; -fx-font-weight: bold; -fx-background-radius: 8;" text="Active Borrowers" />
+      <Button layoutX="265.0" layoutY="265.0" mnemonicParsing="false" onAction="#btnAllBooksReportOnAction" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #2ecc71; -fx-text-fill: white; -fx-font-size: 15; -fx-font-weight: bold; -fx-background-radius: 8;" text="All Books" />
+      <Button layoutX="265.0" layoutY="310.0" mnemonicParsing="false" onAction="#btnAllBorrowedBookReportOnAction" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #e67e22; -fx-text-fill: white; -fx-font-size: 15; -fx-font-weight: bold; -fx-background-radius: 8;" text="Borrowed Books" />
+      <Button layoutX="265.0" layoutY="355.0" mnemonicParsing="false" onAction="#btnBookAvailabilityOnAction" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #9b59b6; -fx-text-fill: white; -fx-font-size: 15; -fx-font-weight: bold; -fx-background-radius: 8;" text="Available Books" />
+      <Button layoutX="265.0" layoutY="400.0" mnemonicParsing="false" onAction="#btnAllCustomerReortOnAction" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #1abc9c; -fx-text-fill: white; -fx-font-size: 15; -fx-font-weight: bold; -fx-background-radius: 8;" text="All Customers" />
+      <Button layoutX="265.0" layoutY="445.0" mnemonicParsing="false" onAction="#btnFineCollectionOnAction" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #c0392b; -fx-text-fill: white; -fx-font-size: 15; -fx-font-weight: bold; -fx-background-radius: 8;" text="Fine Collection" />
+      <Button layoutX="265.0" layoutY="490.0" mnemonicParsing="false" onAction="#btnOverdueBooksReportOnAction" prefHeight="35.0" prefWidth="200.0" style="-fx-background-color: #f39c12; -fx-text-fill: white; -fx-font-size: 15; -fx-font-weight: bold; -fx-background-radius: 8;" text="Overdue Books" />
+
+      <ImageView fitHeight="140.0" fitWidth="190.0" layoutX="275.0" layoutY="540.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/output-onlinegiftools.gif" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

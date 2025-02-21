@@ -1,0 +1,111 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="Overdue_Books_Report" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="18a18646-2797-438d-9858-0fb81ace0819">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (3)"/>
+	<query language="SQL"><![CDATA[SELECT b.BookID, b.Title, lm.Name AS Borrower, br.BorrowDate, br.ReturnDate
+FROM borrowrecords br
+JOIN books b ON br.BookID = b.BookID
+JOIN librarymembers lm ON br.MemberID = lm.MemberID
+WHERE br.isReturned = 0 AND br.ReturnDate < CURDATE();
+]]></query>
+	<field name="BookID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="BookID"/>
+		<property name="com.jaspersoft.studio.field.label" value="BookID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="books"/>
+	</field>
+	<field name="Title" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Title"/>
+		<property name="com.jaspersoft.studio.field.label" value="Title"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="books"/>
+	</field>
+	<field name="Borrower" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="Name"/>
+		<property name="com.jaspersoft.studio.field.label" value="Borrower"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="librarymembers"/>
+	</field>
+	<field name="BorrowDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="BorrowDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="BorrowDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowrecords"/>
+	</field>
+	<field name="ReturnDate" class="java.sql.Date">
+		<property name="com.jaspersoft.studio.field.name" value="ReturnDate"/>
+		<property name="com.jaspersoft.studio.field.label" value="ReturnDate"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="borrowrecords"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="36" splitType="Stretch">
+		<element kind="staticText" uuid="9f547a9f-07f1-484d-99b2-f0567e9ec22f" x="170" y="0" width="280" height="30" fontSize="19.0" bold="true">
+			<text><![CDATA[Overdue Books Report]]></text>
+		</element>
+	</title>
+	<pageHeader height="44" splitType="Stretch">
+		<element kind="staticText" uuid="0f29e3ee-409e-46d8-b80f-65e29abbc98b" x="15" y="0" width="525" height="44">
+			<text><![CDATA[This report highlights books that have exceeded their return date and are overdue. It helps librarians follow up with borrowers to return the books on time.]]></text>
+		</element>
+	</pageHeader>
+	<columnHeader height="26" splitType="Stretch">
+		<element kind="staticText" uuid="87ca6747-3315-4cfe-af49-1b5f925e4a90" x="45" y="0" width="80" height="26" bold="true" hTextAlign="Center">
+			<text><![CDATA[BookID]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c86aee10-ed6e-40e7-a164-ea77068c1a02"/>
+		</element>
+		<element kind="staticText" uuid="07add2e8-5bf5-4ec7-9e3e-87a6ce0a0d56" x="125" y="1" width="100" height="19" bold="true" hTextAlign="Center">
+			<text><![CDATA[Title]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="205f0cbf-fc3b-48b9-b705-cdc50da622c1"/>
+		</element>
+		<element kind="staticText" uuid="6f646db4-e5e1-4d8d-9cff-1d81b500a391" x="225" y="1" width="100" height="20" bold="true" hTextAlign="Center">
+			<text><![CDATA[Borrower]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e3633087-2381-4b30-b3a2-8c4add88ce42"/>
+		</element>
+		<element kind="staticText" uuid="10bd3e4e-7e4d-4a9c-9401-07e3e6049e92" x="325" y="0" width="100" height="21" bold="true">
+			<text><![CDATA[BorrowDate]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cd4c11c0-1bd0-426a-9ec3-b5ee3e01f0eb"/>
+		</element>
+		<element kind="staticText" uuid="11641b42-e3d3-48a3-be0e-6952058bfef1" x="425" y="-3" width="100" height="26" bold="true" hTextAlign="Center">
+			<text><![CDATA[ReturnDate]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="caa657ef-a9cd-4a09-b30e-96a255f8a5d8"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="30" splitType="Stretch">
+			<element kind="textField" uuid="c6271ad2-a672-412c-a059-67df1c2789de" x="45" y="0" width="80" height="30" hTextAlign="Center">
+				<expression><![CDATA[$F{BookID}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="c86aee10-ed6e-40e7-a164-ea77068c1a02"/>
+			</element>
+			<element kind="textField" uuid="a3c93fed-bcd5-4ca2-9f45-34768c958277" x="125" y="0" width="100" height="30" hTextAlign="Center">
+				<expression><![CDATA[$F{Title}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="205f0cbf-fc3b-48b9-b705-cdc50da622c1"/>
+			</element>
+			<element kind="textField" uuid="5741f72b-5e92-46c5-b0b2-9895f3d2fe89" x="225" y="0" width="100" height="30" hTextAlign="Center">
+				<expression><![CDATA[$F{Borrower}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="e3633087-2381-4b30-b3a2-8c4add88ce42"/>
+			</element>
+			<element kind="textField" uuid="81cc8e62-5c81-45d3-85be-8773a224d1c4" x="325" y="0" width="100" height="30" hTextAlign="Center">
+				<expression><![CDATA[$F{BorrowDate}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="cd4c11c0-1bd0-426a-9ec3-b5ee3e01f0eb"/>
+			</element>
+			<element kind="textField" uuid="c3f6c213-eae5-4714-8259-85f51aba5c0f" x="425" y="-5" width="100" height="30" hTextAlign="Center">
+				<expression><![CDATA[$F{ReturnDate}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="caa657ef-a9cd-4a09-b30e-96a255f8a5d8"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="50" splitType="Stretch">
+		<element kind="staticText" uuid="218ad9c5-2ca0-4aef-8fe8-05be6ec7d5ef" x="15" y="10" width="525" height="40">
+			<text><![CDATA[Thank you for using our Library Management System! We strive to enhance your reading experience by providing efficient services and insightful reports. If you have any questions or suggestions, feel free to reach out to the library administration.]]></text>
+		</element>
+	</columnFooter>
+	<pageFooter height="60" splitType="Stretch">
+		<element kind="staticText" uuid="1688d453-3210-449a-a307-e9832938c80c" x="15" y="10" width="310" height="50">
+			<text><![CDATA[ Thank You Message
+📖 Library Management System– Comprehensive Report
+
+]]></text>
+		</element>
+	</pageFooter>
+	<summary height="48" splitType="Stretch">
+		<element kind="staticText" uuid="f3eace8f-7aac-4f2a-9cf5-461cd0abef96" x="160" y="0" width="304" height="30">
+			<text><![CDATA[All Right Reserved For Library Management System @2025]]></text>
+		</element>
+	</summary>
+</jasperReport>

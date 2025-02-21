@@ -1,0 +1,68 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="Fine_Collection_Report" language="java" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="88729b63-c014-4014-9595-6ed0ace36415">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter (5)"/>
+	<query language="SQL"><![CDATA[SELECT SUM(FineAmount) AS TotalCollected, COUNT(*) AS TotalFines
+FROM fines
+WHERE PaymentDate IS NOT NULL;
+]]></query>
+	<field name="TotalCollected" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="TotalCollected"/>
+		<property name="com.jaspersoft.studio.field.label" value="TotalCollected"/>
+	</field>
+	<field name="TotalFines" class="java.lang.Long">
+		<property name="com.jaspersoft.studio.field.name" value="TotalFines"/>
+		<property name="com.jaspersoft.studio.field.label" value="TotalFines"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="39" splitType="Stretch">
+		<element kind="staticText" uuid="5919de43-cd64-4af0-8290-795abc9c895e" x="140" y="0" width="290" height="30" fontSize="22.0" bold="true" hTextAlign="Center">
+			<text><![CDATA[Fine Collection Report]]></text>
+		</element>
+	</title>
+	<pageHeader height="44" splitType="Stretch">
+		<element kind="staticText" uuid="acccd0c6-21f1-4dac-b1bf-8b4051cb9bac" x="0" y="14" width="550" height="30">
+			<text><![CDATA[This report summarizes the total fines collected from overdue book returns. It helps in monitoring revenue from penalties.]]></text>
+		</element>
+	</pageHeader>
+	<columnHeader height="32" splitType="Stretch">
+		<element kind="staticText" uuid="ab8b43f0-fcb5-42c2-b4e6-ad99bcc0e461" x="180" y="0" width="100" height="30" bold="true" hTextAlign="Center">
+			<text><![CDATA[TotalCollected]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7ab4f95d-d9b1-4235-a38f-609cb0276f26"/>
+		</element>
+		<element kind="staticText" uuid="7d276ca8-033e-4cbc-a210-bac18a5ea08e" x="280" y="0" width="100" height="30" bold="true" hTextAlign="Center">
+			<text><![CDATA[TotalFines]]></text>
+			<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="676d9ab4-67f7-4edc-a9ac-5d8a7fa8e767"/>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="22" splitType="Stretch">
+			<element kind="textField" uuid="47ce19d2-fd66-4edb-85b3-c452c6298c57" x="180" y="0" width="100" height="20" hTextAlign="Center">
+				<expression><![CDATA[$F{TotalCollected}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="7ab4f95d-d9b1-4235-a38f-609cb0276f26"/>
+			</element>
+			<element kind="textField" uuid="0d88701c-22e8-45cd-860b-3e2cd802cacc" x="280" y="0" width="100" height="20" hTextAlign="Center">
+				<expression><![CDATA[$F{TotalFines}]]></expression>
+				<property name="com.jaspersoft.studio.spreadsheet.connectionID" value="676d9ab4-67f7-4edc-a9ac-5d8a7fa8e767"/>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="55" splitType="Stretch">
+		<element kind="staticText" uuid="2209e21a-13c4-42a6-bbbc-4d91f27d54b4" x="0" y="10" width="560" height="45">
+			<text><![CDATA[Thank you for using our Library Management System! We strive to enhance your reading experience by providing efficient services and insightful reports. If you have any questions or suggestions, feel free to reach out to the library administration.]]></text>
+		</element>
+	</columnFooter>
+	<pageFooter height="51" splitType="Stretch">
+		<element kind="staticText" uuid="963d6df8-e32f-4632-b7da-689d52c807e6" x="0" y="0" width="300" height="50">
+			<text><![CDATA[ Thank You Message
+📖 Library Management System– Comprehensive Report
+
+]]></text>
+		</element>
+	</pageFooter>
+	<summary height="42" splitType="Stretch">
+		<element kind="staticText" uuid="6493c558-9fd8-452a-bd75-869251697d23" x="150" y="0" width="360" height="30">
+			<text><![CDATA[All Right Reserved For Library Management System @2025]]></text>
+		</element>
+	</summary>
+</jasperReport>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.Label?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXButton?>
+
+<AnchorPane prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.librarymanagmentsystem.controller.singup.SignUpFromController">
+   <children>
+      <HBox spacing="0" prefHeight="550.0" prefWidth="750.0">
+         <children>
+            <!-- Left Side: Background Image -->
+            <AnchorPane prefWidth="400.0" style="-fx-background-image: url('/images/8.jpg'); -fx-background-size: cover; -fx-background-position: center;">
+            </AnchorPane>
+
+            <!-- Right Side: Sign-Up Form -->
+            <VBox alignment="CENTER" spacing="15.0" prefWidth="350.0" style="-fx-background-color: #f4f8ff; -fx-padding: 40px; -fx-border-radius: 10px;">
+               <children>
+                  <!-- App Branding -->
+                  <Label text="📚 BookBridge - Bridging Readers to Knowledge ✨" style="-fx-font-size: 11px; -fx-font-weight: bold; -fx-text-fill: #0056b3;" />
+
+                  <Label text="Create a New Account" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #333;" />
+                  <Label text="Sign up to get started" style="-fx-font-size: 13px; -fx-text-fill: #666;" />
+
+                  <!-- Form Fields -->
+                  <Label fx:id="txtUserID" text="User ID - L000#" style="-fx-font-size: 14px;" />
+                  <JFXTextField fx:id="userNameTxtField" promptText="User Name" style="-fx-pref-width: 280px; -fx-background-radius: 5px;" />
+                  <JFXTextField fx:id="gmailTxtField" promptText="Gmail" style="-fx-pref-width: 280px; -fx-background-radius: 5px;" />
+                  <JFXTextField fx:id="passwordTxtField" promptText="Password" style="-fx-pref-width: 280px; -fx-background-radius: 5px;" />
+
+                  <JFXButton text="Sign Up" onAction="#btnSingUpOnAction"
+                             style="-fx-background-color: #0056b3; -fx-text-fill: white; -fx-pref-width: 280px; -fx-font-size: 14px; -fx-padding: 10px; -fx-border-radius: 5px;" />
+
+                  <Label text="Already have an account?" style="-fx-text-fill: #666; -fx-font-size: 12px;" />
+                  <JFXButton text="Login" onAction="#btnLoginUpOnAction"
+                             style="-fx-text-fill: #800040; -fx-font-size: 14px;" />
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>
