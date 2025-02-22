@@ -10,42 +10,63 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="686.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.librarymanagmentsystem.controller.Member.MemberManagmentFormController">
+<AnchorPane prefHeight="686.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/23.0.1" 
+            xmlns:fx="http://javafx.com/fxml/1" 
+            fx:controller="edu.icet.librarymanagmentsystem.controller.Member.MemberManagmentFormController"
+            stylesheets="">
+   
    <children>
-      <AnchorPane layoutY="10.0" prefHeight="686.0" prefWidth="712.0" style="-fx-background-color: #F5F7FA;">
+      <AnchorPane layoutY="10.0" prefHeight="686.0" prefWidth="712.0" styleClass="main-pane">
          <children>
-            <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1976D2" height="88.0" layoutX="-1.0" layoutY="-11.0" width="713.0" />
-            <Label layoutX="236.0" layoutY="18.0" text="Customer Management" textFill="WHITE">
-               <font>
-                  <Font name="Segoe UI Bold" size="24.0" />
-               </font>
-            </Label>
-            <TextField fx:id="txtIdField" layoutX="191.0" layoutY="121.0" promptText="Customer ID" style="-fx-background-color: #FFFFFF; -fx-border-color: #DADADA;" />
-            <TextField fx:id="txtNameField" layoutX="484.0" layoutY="120.0" promptText="Customer Name" style="-fx-background-color: #FFFFFF; -fx-border-color: #DADADA;" />
-            <TextField fx:id="txtContactField" layoutX="191.0" layoutY="207.0" promptText="Customer Address" style="-fx-background-color: #FFFFFF; -fx-border-color: #DADADA;" />
-            <Label layoutX="66.0" layoutY="125.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14; -fx-text-fill: #333333;" text="Customer ID:">
-               <font>
-                  <Font size="8.0" />
-               </font>
-            </Label>
-            <Label layoutX="66.0" layoutY="211.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14; -fx-text-fill: #333333;" text="Contact Info" />
-            <Label layoutX="362.0" layoutY="125.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14; -fx-text-fill: #333333;" text="Customer Name:" />
-            <Label layoutX="363.0" layoutY="213.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14; -fx-text-fill: #333333;" text="MembershipDate" />
-            <Button layoutX="429.0" layoutY="312.0" mnemonicParsing="false" onAction="#addaCustomerOnAction" prefHeight="30.0" prefWidth="65.0" style="-fx-background-color: #2ECC71; -fx-text-fill: white; -fx-font-size: 14;" text="Add" />
-            <Button layoutX="362.0" layoutY="312.0" mnemonicParsing="false" onAction="#deleteCustomerOnAction" prefHeight="30.0" prefWidth="61.0" style="-fx-background-color: #E74C3C; -fx-text-fill: white; -fx-font-size: 14;" text="Delete" />
-            <Button layoutX="292.0" layoutY="312.0" mnemonicParsing="false" onAction="#updateCustomerOnAction" style="-fx-background-color: #F39C12; -fx-text-fill: white; -fx-font-size: 14;" text="Update" />
-            <Button layoutX="220.0" layoutY="312.0" mnemonicParsing="false" onAction="#searchCustomerOnAction" prefHeight="30.0" prefWidth="66.0" style="-fx-background-color: #1ABC9C; -fx-text-fill: white; -fx-font-size: 14;" text="Search" />
-            <TableView fx:id="tblCustomer" layoutX="17.0" layoutY="372.0" prefHeight="297.0" prefWidth="678.0" style="-fx-background-color: white; -fx-border-color: #DADADA;">
+            <Rectangle arcHeight="10.0" arcWidth="10.0" styleClass="header-rectangle" 
+                       height="88.0" layoutX="-1.0" layoutY="-11.0" width="713.0" />
+            
+            <Label layoutX="236.0" layoutY="18.0" styleClass="title-label" text="Customer Management" />
+            
+            <TextField fx:id="txtIdField" layoutX="191.0" layoutY="121.0" promptText="Customer ID" 
+                       styleClass="input-field" />
+            
+            <TextField fx:id="txtNameField" layoutX="484.0" layoutY="120.0" promptText="Customer Name" 
+                       styleClass="input-field" />
+            
+            <TextField fx:id="txtContactField" layoutX="191.0" layoutY="207.0" promptText="Customer Address" 
+                       styleClass="input-field" />
+            
+            <Label layoutX="66.0" layoutY="125.0" styleClass="form-label" text="Customer ID:" />
+            <Label layoutX="66.0" layoutY="211.0" styleClass="form-label" text="Contact Info" />
+            <Label layoutX="362.0" layoutY="125.0" styleClass="form-label" text="Customer Name:" />
+            <Label layoutX="363.0" layoutY="213.0" styleClass="form-label" text="MembershipDate" />
+            
+            <Button layoutX="429.0" layoutY="312.0" mnemonicParsing="false" onAction="#addaCustomerOnAction" 
+                    styleClass="btn-primary" text="Add" />
+            
+            <Button layoutX="362.0" layoutY="312.0" mnemonicParsing="false" onAction="#deleteCustomerOnAction" 
+                    styleClass="btn-danger" text="Delete" />
+            
+            <Button layoutX="292.0" layoutY="312.0" mnemonicParsing="false" onAction="#updateCustomerOnAction" 
+                    styleClass="btn-secondary" text="Update" />
+            
+            <Button layoutX="220.0" layoutY="312.0" mnemonicParsing="false" onAction="#searchCustomerOnAction" 
+                    styleClass="btn-secondary" text="Search" />
+            
+            <TableView fx:id="tblCustomer" layoutX="17.0" layoutY="372.0" prefHeight="297.0" prefWidth="678.0" 
+                       styleClass="data-table">
                <columns>
-                  <TableColumn fx:id="cusIdCol" prefWidth="102.39999389648438" text="Customer ID" />
-                  <TableColumn fx:id="cusNameCol" prefWidth="204.79998779296875" text="Customer Name" />
-                  <TableColumn fx:id="cusContactCol" prefWidth="178.4000244140625" text="Customer Contact" />
-                  <TableColumn fx:id="cusMembershipDateCol" prefWidth="191.20001220703125" text="Membership Date" />
+                  <TableColumn fx:id="cusIdCol" prefWidth="102.4" text="Customer ID" />
+                  <TableColumn fx:id="cusNameCol" prefWidth="204.8" text="Customer Name" />
+                  <TableColumn fx:id="cusContactCol" prefWidth="178.4" text="Customer Contact" />
+                  <TableColumn fx:id="cusMembershipDateCol" prefWidth="191.2" text="Membership Date" />
                </columns>
             </TableView>
-            <DatePicker fx:id="txtMembershipDateField" layoutX="485.0" layoutY="207.0" prefHeight="30.0" prefWidth="151.0" />
-            <Button layoutX="537.0" layoutY="312.0" mnemonicParsing="false" onAction="#loadTBLOnAction" prefHeight="30.0" prefWidth="88.0" style="-fx-background-color: #2ECC71; -fx-text-fill: white; -fx-font-size: 14;" text="Load Tabel" />
-            <Button layoutX="77.0" layoutY="311.0" mnemonicParsing="false" onAction="#btnReportOnAction" prefHeight="30.0" prefWidth="88.0" style="-fx-background-color: #2ECC71; -fx-text-fill: white; -fx-font-size: 14;" text="Reports" />
+            
+            <DatePicker fx:id="txtMembershipDateField" layoutX="485.0" layoutY="207.0" 
+                        styleClass="input-field" prefHeight="30.0" prefWidth="151.0" />
+            
+            <Button layoutX="537.0" layoutY="312.0" mnemonicParsing="false" onAction="#loadTBLOnAction" 
+                    styleClass="btn-primary" text="Load Table" />
+            
+            <Button layoutX="77.0" layoutY="311.0" mnemonicParsing="false" onAction="#btnReportOnAction" 
+                    styleClass="btn-primary" text="Reports" />
          </children>
       </AnchorPane>
    </children>

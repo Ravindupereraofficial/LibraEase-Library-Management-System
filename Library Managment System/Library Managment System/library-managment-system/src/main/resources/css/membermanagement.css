@@ -1,0 +1,106 @@
+/* Color Palette */
+.root {
+    -primary-color: #96C291;
+    -secondary-color: #FFDBAA;
+    -background-color: #F4EEEE;
+    -text-color: #333333;
+    -danger-color: #D32F2F;
+}
+
+/* Main Container */
+.main-pane {
+    -fx-background-color: -background-color;
+}
+
+/* Header Styling */
+.header-rectangle {
+    -fx-fill: -primary-color;
+    -fx-arc-width: 10;
+    -fx-arc-height: 10;
+}
+
+.title-label {
+    -fx-text-fill: white;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+/* Form Elements */
+.input-field {
+    -fx-background-color: white;
+    -fx-border-color: -secondary-color;
+    -fx-border-radius: 4px;
+    -fx-background-radius: 4px;
+    -fx-prompt-text-fill: #999999;
+}
+
+.form-label {
+    -fx-text-fill: -text-color;
+    -fx-font-size: 14px;
+}
+
+/* Table Styling */
+.data-table {
+    -fx-background-color: white;
+    -fx-border-color: derive(-secondary-color, -20%);
+    -fx-border-radius: 4px;
+}
+
+.data-table .column-header-background {
+    -fx-background-color: -primary-color;
+    -fx-border-radius: 4px 4px 0 0;
+}
+
+.data-table .column-header, .data-table .filler {
+    -fx-background-color: transparent;
+}
+
+.data-table .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.data-table .table-row-cell:even {
+    -fx-background-color: #F8FAFC;
+}
+
+.data-table .table-row-cell:odd {
+    -fx-background-color: white;
+}
+
+/* Button Styling */
+.btn-primary {
+    -fx-background-color: -primary-color;
+    -fx-text-fill: white;
+    -fx-background-radius: 4px;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.btn-primary:hover {
+    -fx-background-color: derive(-primary-color, -20%);
+}
+
+.btn-secondary {
+    -fx-background-color: -secondary-color;
+    -fx-text-fill: -text-color;
+    -fx-background-radius: 4px;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: derive(-secondary-color, -20%);
+}
+
+.btn-danger {
+    -fx-background-color: -danger-color;
+    -fx-text-fill: white;
+    -fx-background-radius: 4px;
+    -fx-font-size: 14px;
+    -fx-cursor: hand;
+}
+
+.btn-danger:hover {
+    -fx-background-color: derive(-danger-color, -20%);
+}
