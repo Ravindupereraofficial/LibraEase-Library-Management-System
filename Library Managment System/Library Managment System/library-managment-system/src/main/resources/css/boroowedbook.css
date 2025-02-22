@@ -1,0 +1,69 @@
+/* Main Container Styling */
+.root-pane {
+    -fx-background-color: #F4EEEE;
+}
+
+.header-rectangle {
+    -fx-fill: #96C291;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10,0,0,3);
+}
+
+/* Text Styling */
+.title-text {
+    -fx-fill: white;
+    -fx-font-family: 'Segoe UI Bold';
+    -fx-font-size: 24;
+}
+
+.label-text {
+    -fx-text-fill: #333333;
+    -fx-font-family: 'Segoe UI';
+    -fx-font-size: 14;
+}
+
+/* Button Styling */
+.btn-primary {
+    -fx-background-color: #96C291;
+    -fx-text-fill: white;
+    -fx-font-size: 14;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5,0,0,2);
+    -fx-cursor: hand;
+}
+
+.btn-primary:hover {
+    -fx-background-color: #7DAE7A;
+}
+
+.btn-secondary {
+    -fx-background-color: #FFDBAA;
+    -fx-text-fill: #333333;
+    -fx-font-size: 14;
+    -fx-background-radius: 5;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 5,0,0,2);
+    -fx-cursor: hand;
+}
+
+.btn-secondary:hover {
+    -fx-background-color: #E6C595;
+}
+
+/* Text Field Styling */
+.jfx-text-field {
+    -jfx-focus-color: #96C291;
+    -jfx-unfocus-color: #FFDBAA;
+    -fx-font-size: 14;
+    -fx-background-radius: 5;
+}
+
+.date-picker {
+    -fx-font-size: 14;
+}
+
+.date-picker .arrow-button {
+    -fx-background-color: #96C291;
+}
+
+.date-picker .arrow-button:hover {
+    -fx-background-color: #7DAE7A;
+}
