@@ -11,37 +11,35 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.librarymanagmentsystem.controller.login.LoginFormController">
+<AnchorPane prefHeight="550.0" prefWidth="750.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.librarymanagmentsystem.controller.login.LoginFormController">
    <children>
       <HBox spacing="0" prefHeight="550.0" prefWidth="750.0">
          <children>
             <!-- Left Side: Auto-Sliding Image Gallery -->
-            <StackPane prefWidth="400.0">
+            <StackPane prefWidth="400.0" styleClass="image-container">
                <children>
                   <ImageView fx:id="imageView" fitWidth="400.0" fitHeight="550.0" preserveRatio="false" />
                </children>
             </StackPane>
 
             <!-- Right Side: Login Form -->
-            <VBox alignment="CENTER" spacing="15.0" prefWidth="350.0" style="-fx-background-color: #f4f8ff; -fx-padding: 40px; -fx-border-radius: 10px;">
+            <VBox alignment="CENTER" spacing="15.0" prefWidth="350.0" styleClass="login-container">
                <children>
                   <!-- App Branding -->
-                  <Label text="📚 BookBridge - Bridging Readers to Knowledge ✨" style="-fx-font-size: 11px; -fx-font-weight: bold; -fx-text-fill: #0056b3;" />
+                  <Label text="📚 BookBridge - Bridging Readers to Knowledge ✨" styleClass="branding" />
 
-                  <Label text="Welcome Back!" style="-fx-font-size: 22px; -fx-font-weight: bold; -fx-text-fill: #333;" />
-                  <Label text="Login to your account" style="-fx-font-size: 13px; -fx-text-fill: #666;" />
+                  <Label text="Welcome Back!" styleClass="heading1" />
+                  <Label text="Login to your account" styleClass="heading2" />
 
-                  <JFXTextField fx:id="emailTxtField" promptText="Email" style="-fx-pref-width: 280px; -fx-background-radius: 5px;" />
-                  <JFXPasswordField fx:id="passwordTxtField" promptText="Password" style="-fx-pref-width: 280px; -fx-background-radius: 5px;" />
+                  <JFXTextField fx:id="emailTxtField" promptText="Email" styleClass="text-field" />
+                  <JFXPasswordField fx:id="passwordTxtField" promptText="Password" styleClass="text-field" />
 
-                  <JFXButton text="Login" onAction="#btnLoginOnAction"
-                             style="-fx-background-color: #0056b3; -fx-text-fill: white; -fx-pref-width: 280px; -fx-font-size: 14px; -fx-padding: 10px; -fx-border-radius: 5px;" />
+                  <JFXButton text="Login" onAction="#btnLoginOnAction" styleClass="btn-primary" />
 
-                  <Label text="Forgot your password?" style="-fx-text-fill: #0056b3; -fx-font-size: 12px; -fx-cursor: hand;" onMouseClicked="#fogotPasswordBtnOnAction" />
+                  <Label text="Forgot your password?" styleClass="link" onMouseClicked="#fogotPasswordBtnOnAction" />
 
-                  <Label text="Not registered yet?" style="-fx-text-fill: #666; -fx-font-size: 12px;" />
-                  <JFXButton text="Create an account" onAction="#btnSignUpOnAction"
-                             style="-fx-text-fill: #0056b3; -fx-font-size: 14px;" />
+                  <Label text="Not registered yet?" styleClass="heading2" />
+                  <JFXButton text="Create an account" onAction="#btnSignUpOnAction" styleClass="btn-secondary" />
                </children>
             </VBox>
          </children>
