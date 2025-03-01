@@ -1,0 +1,81 @@
+/* Root Background Styling */
+.root {
+    -fx-background-color: #b3f6f7;
+    -fx-padding: 20px;
+}
+
+/* Styling the VBox for centering the content and adding spacing */
+.VBox {
+    -fx-alignment: center;
+    -fx-spacing: 20px;
+    -fx-background-color: #ffffff;
+    -fx-padding: 20px;
+    -fx-background-radius: 10px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 10);
+}
+
+/* Styling for the OTP TextField */
+#otpCodeTxtField {
+    -fx-font-size: 16px;
+    -fx-prompt-text-fill: #8c8c8c;
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 10px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-pref-width: 250px;
+    -fx-padding: 10px;
+}
+
+/* Styling for the New Password TextField */
+#newPasswordTxtField {
+    -fx-font-size: 16px;
+    -fx-prompt-text-fill: #8c8c8c;
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 10px;
+    -fx-border-color: #e0e0e0;
+    -fx-border-width: 1px;
+    -fx-pref-width: 250px;
+    -fx-padding: 10px;
+}
+
+/* Focused state for TextFields */
+#otpCodeTxtField:focused, #newPasswordTxtField:focused {
+    -fx-border-color: #59115c;
+    -fx-effect: inner-bevel;
+}
+
+/* Styling for the Reset Button */
+#btnResetOnAction {
+    -fx-background-color: #59115c;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 250px;
+    -fx-padding: 10px;
+    -fx-background-radius: 10px;
+    -fx-cursor: hand;
+    -fx-border-radius: 10px;
+    -fx-border-width: 2px;
+    -fx-border-color: #59115c;
+}
+
+/* Hover effect for Reset Button */
+#btnResetOnAction:hover {
+    -fx-background-color: #5d1b6d;
+    -fx-border-color: #5d1b6d;
+}
+
+/* Focused effect for the button */
+#btnResetOnAction:focused {
+    -fx-background-color: #5d1b6d;
+    -fx-border-color: #5d1b6d;
+}
+
+/* Styling for the prompt text inside the TextFields */
+#otpCodeTxtField .text {
+    -fx-text-fill: #4d4d4d;
+}
+
+#newPasswordTxtField .text {
+    -fx-text-fill: #4d4d4d;
+}

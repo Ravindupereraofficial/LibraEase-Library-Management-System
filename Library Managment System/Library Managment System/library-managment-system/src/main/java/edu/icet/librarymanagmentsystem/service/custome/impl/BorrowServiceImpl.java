@@ -198,14 +198,14 @@ public class BorrowServiceImpl implements BorrowService {
             String lastBorrowId = borrowDao.getLastBorrowId(connection);
 
             if (lastBorrowId == null) {
-                return "BR0001";
+                return "BR001";
             } else {
 
                 int lastNumber = Integer.parseInt(lastBorrowId.substring(2));
                 int nextNumber = lastNumber + 1;
 
 
-                return String.format("BR%04d", nextNumber);
+                return String.format("BR%02sd", nextNumber);
             }
         } finally {
             if (connection != null) {

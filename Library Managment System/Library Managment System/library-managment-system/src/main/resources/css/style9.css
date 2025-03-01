@@ -1,0 +1,91 @@
+/* General Background */
+.anchor-pane {
+    -fx-background-color: #F5F7FA;
+}
+
+/* Header Style */
+
+/* Member Information Labels */
+.label:has-text("Member ID:"),
+.label:has-text("Member Name :"),
+.label:has-text("Contact :"),
+.label:has-text("Select Book :") {
+    -fx-font-family: "Segoe UI";
+    -fx-font-size: 14px;
+    -fx-text-fill: #333333;
+    -fx-padding: 5px;
+}
+
+/* Member ID, Name, and Contact Text Fields */
+.jfx-text-field {
+    -fx-font-size: 14px;
+    -fx-pref-height: 30px;
+    -fx-pref-width: 160px;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #DADADA;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+/* Buttons */
+.button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-text-fill: white;
+    -fx-pref-height: 35px;
+    -fx-pref-width: 230px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 5, 0.8, 0, 2);
+    -fx-transition: all 0.3s ease;
+}
+
+/* Button Specific Colors */
+.button#btnMemberSearchOnAction {
+    -fx-background-color: #208ad2;
+}
+
+.button#btnShowFineOnAction {
+    -fx-background-color: #46576b;
+}
+
+.button#btnPayNowOnAction {
+    -fx-background-color: #c91561;
+}
+
+/* Hover Effects */
+.button:hover {
+    -fx-background-color: derive(-fx-background-color, 20%);
+}
+
+/* ComboBox Styling */
+.combo-box {
+    -fx-font-size: 14px;
+    -fx-pref-height: 30px;
+    -fx-pref-width: 160px;
+    -fx-background-color: #ffffff;
+    -fx-border-color: #DADADA;
+    -fx-border-radius: 5px;
+}
+
+/* TableView Styling */
+.table-view {
+    -fx-background-color: white;
+    -fx-border-color: #DADADA;
+    -fx-border-radius: 5px;
+}
+
+.table-column {
+    -fx-font-size: 14px;
+    -fx-text-fill: blacks;
+}
+
+/* Fine TextField Styling */
+.jfx-text-field#fineTxtField {
+    -fx-font-size: 14px;
+    -fx-pref-height: 30px;
+    -fx-pref-width: 160px;
+    -fx-background-color: #f1f1f1;
+    -fx-border-color: #DADADA;
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}

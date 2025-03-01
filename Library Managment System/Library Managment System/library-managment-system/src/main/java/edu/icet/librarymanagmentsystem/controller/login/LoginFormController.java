@@ -102,8 +102,8 @@ public class LoginFormController implements Initializable {
         properties.put("mail.smtp.host","smtp.gmail.com");
         properties.put("mail.smtp.port","587");
 
-        String myEmail="";
-        String myPassword="";
+        String myEmail="derivdima@gmail.com";
+        String myPassword="itkt djvc yyme bdud";
 
         Session session= Session.getInstance(properties, new Authenticator() {
             @Override
@@ -155,22 +155,21 @@ public class LoginFormController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        // Load images (Set the correct paths)
-        images.add(new Image("/images/1.jpg"));
-        images.add(new Image("/images/2.jpg"));
-        images.add(new Image("/images/3.jpg"));
 
-        // Set the first image
-        imageView.setImage(images.get(0));
+//        images.add(new Image("/images/1.jpg"));
+//        images.add(new Image("/images/2.jpg"));
+//        images.add(new Image("/images/3.jpg"));
+//
+//        imageView.setImage(images.get(0));
+//
+//        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(5), event -> switchImage()));
+//        timeline.setCycleCount(Timeline.INDEFINITE);
+//        timeline.play();
+//    }
+//    private void switchImage() {
+//        currentIndex = (currentIndex + 1) % images.size();
+//        imageView.setImage(images.get(currentIndex));
+    }
 
-        // Create a timeline to switch images every 3 seconds
-        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(5), event -> switchImage()));
-        timeline.setCycleCount(Timeline.INDEFINITE); // Loop indefinitely
-        timeline.play();
-    }
-    private void switchImage() {
-        currentIndex = (currentIndex + 1) % images.size(); // Cycle through images
-        imageView.setImage(images.get(currentIndex));
-    }
 
 }

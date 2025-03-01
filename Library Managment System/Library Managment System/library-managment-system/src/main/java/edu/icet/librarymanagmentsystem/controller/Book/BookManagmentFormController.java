@@ -53,7 +53,7 @@ public class BookManagmentFormController implements Initializable {
     public void addBookOnAction(ActionEvent actionEvent) {
 
         try {
-            // Create a MemberDTO object from the form inputs
+
             String isbn = txtIsbnField.getText();
             String name = txtNameField.getText();
             String author = txtAutherField2.getText();
@@ -63,12 +63,11 @@ public class BookManagmentFormController implements Initializable {
 
             Book book = new Book(null, isbn, name, author,categoryid,avalable);
 
-            // Call the service layer to add the member
             boolean isAdded = bookService.addBook(book);
             if(isAdded){
-                new Alert(Alert.AlertType.INFORMATION, "Book Addded Scusess !").show();
+                new Alert(Alert.AlertType.INFORMATION, "Book Addded Scusess...!").show();
             }else{
-                new Alert(Alert.AlertType.INFORMATION, "Book Added Failed!").show();
+                new Alert(Alert.AlertType.INFORMATION, "Book Added Failed...!").show();
             }
 
             refreshTable();
@@ -78,7 +77,7 @@ public class BookManagmentFormController implements Initializable {
             e.printStackTrace();
             // Show an error message to the user
         }
-        
+
     }
 
     private void loadTheId() {

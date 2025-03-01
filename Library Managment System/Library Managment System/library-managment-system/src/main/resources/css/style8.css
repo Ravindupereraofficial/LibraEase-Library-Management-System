@@ -1,0 +1,56 @@
+/* General Background */
+.anchor-pane {
+    -fx-background-color: #f4f8fc;
+}
+
+/* Label Style */
+.label {
+    -fx-text-fill: #2c3e50;
+    -fx-font-family: "Ebrima Bold";
+    -fx-font-size: 30px;
+}
+
+/* Button Styles */
+.button {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 8px;
+    -fx-text-fill: white;
+    -fx-pref-height: 35px;
+    -fx-pref-width: 200px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.15), 5, 0.8, 0, 2);
+    -fx-transition: all 0.3s ease;
+}
+
+.button:default {
+    -fx-background-color: #3e50f1; /* Active Borrowers */
+}
+
+.button:nth-of-type(2) {
+    -fx-background-color: #8d2d96; /* All Books */
+}
+
+.button:nth-of-type(3) {
+    -fx-background-color: #751b4d; /* Borrowed Books */
+}
+
+.button:nth-of-type(4) {
+    -fx-background-color: #64110b; /* Available Books */
+}
+
+.button:nth-of-type(5) {
+    -fx-background-color: #d0285d; /* All Customers */
+}
+
+.button:nth-of-type(6) {
+    -fx-background-color: #c0392b; /* Fine Collection */
+}
+
+.button:nth-of-type(7) {
+    -fx-background-color: #b3099e; /* Overdue Books */
+}
+
+/* Hover Effect */
+.button:hover {
+    -fx-background-color: derive(-fx-background-color, 20%);
+}

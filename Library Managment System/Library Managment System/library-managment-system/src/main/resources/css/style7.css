@@ -1,0 +1,105 @@
+/* Root Background Styling */
+.root {
+    -fx-background-color: #F5F7FA;
+}
+
+/* Styling for the rectangle header */
+Rectangle {
+    -fx-arc-height: 10px;
+    -fx-arc-width: 10px;
+    -fx-fill: #59115c;
+}
+
+/* Label Styling for Customer Management */
+
+
+/* TextField Styling */
+TextField {
+    -fx-font-size: 14px;
+    -fx-background-color: #ffffff;
+    -fx-border-radius: 5px;
+    -fx-border-color: #DADADA;
+    -fx-border-width: 1px;
+    -fx-padding: 10px;
+    -fx-pref-width: 200px;
+    -fx-focus-color: #59115c;
+}
+
+
+
+/* Button Styling */
+Button {
+    -fx-background-radius: 5px;
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-padding: 10px;
+    -fx-pref-width: 90px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+    -fx-border-radius: 5px;
+}
+
+/* Specific Button Colors */
+#addaCustomerOnAction {
+    -fx-background-color: #4515ad;
+}
+
+#deleteCustomerOnAction {
+    -fx-background-color: #0f78a4;
+}
+
+#updateCustomerOnAction {
+    -fx-background-color: #731a75;
+}
+
+#searchCustomerOnAction {
+    -fx-background-color: #5a311c;
+}
+
+#loadTBLOnAction {
+    -fx-background-color: #5a1c3d;
+}
+
+#btnReportOnAction {
+    -fx-background-color: #d02241;
+}
+
+/* Button Hover Effect */
+Button:hover {
+    -fx-opacity: 0.9;
+}
+
+/* TableView Styling */
+TableView {
+    -fx-background-color: white;
+    -fx-border-color: #DADADA;
+    -fx-border-radius: 5px;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.1), 5, 0, 0, 5);
+}
+
+/* Table Column Styling */
+TableColumn {
+    -fx-font-size: 14px;
+    -fx-font-family: 'Segoe UI';
+    -fx-text-fill: #333333;
+}
+
+/* DatePicker Styling */
+DatePicker {
+    -fx-font-size: 14px;
+    -fx-background-color: white;
+    -fx-border-color: #DADADA;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px;
+    -fx-pref-width: 200px;
+    -fx-focus-color: #59115c;
+}
+
+/* Label Styling for Table Columns */
+
+
+/* Focus Effects */
+TextField:focused, DatePicker:focused {
+    -fx-border-color: #59115c;
+    -fx-background-color: #f3f3f3;
+}

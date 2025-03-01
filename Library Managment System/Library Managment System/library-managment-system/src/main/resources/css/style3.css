@@ -1,0 +1,141 @@
+/* Set up a global font family */
+* {
+    font-family: 'Segoe UI', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Background and general layout */
+.AnchorPane {
+    background-color: #F5F7FA;
+    padding: 20px;
+}
+
+.AnchorPane > AnchorPane {
+    background-color: #F5F7FA;
+    border-radius: 12px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Header section */
+.Rectangle {
+    background: linear-gradient(45deg, #59115c, #9e2a84);
+    border-radius: 10px;
+    height: 78px;
+    margin-top: -10px;
+}
+
+.Label {
+    color: white;
+    font-weight: bold;
+}
+
+.Label[text="Borrow Book"] {
+    font-size: 30px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Input fields */
+.JFXTextField {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #D6D8DB;
+    -fx-border-radius: 8px;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+    -fx-focus-color: #328AD7;
+    -fx-pref-height: 40px;
+    -fx-pref-width: 180px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Input fields when focused */
+.JFXTextField:focused {
+    -fx-border-color: #328AD7;
+    -fx-background-color: #e9f0f8;
+}
+
+/* Buttons */
+.Button {
+    -fx-background-color: #D7623D;
+    -fx-text-fill: white;
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-padding: 12px;
+    -fx-background-radius: 8px;
+    -fx-border-color: transparent;
+    -fx-transition: background-color 0.3s ease-in-out;
+}
+
+.Button:hover {
+    -fx-background-color: #A255AF;
+    cursor: pointer;
+}
+
+.Button:pressed {
+    -fx-background-color: #59115c;
+}
+
+/* DatePicker and TextField alignment */
+.DatePicker {
+    -fx-background-color: #ffffff;
+    -fx-border-color: #D6D8DB;
+    -fx-border-radius: 8px;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+    -fx-pref-height: 40px;
+    -fx-pref-width: 230px;
+}
+
+/* Labels for inputs */
+.Label {
+    color: #333;
+    font-size: 14px;
+    font-weight: normal;
+    margin-top: 10px;
+}
+
+/* More specific Label targeting */
+.Label[text="Member ID:"], .Label[text="Member Name:"], .Label[text="Contact :"],
+.Label[text="Book ID:"], .Label[text="Book Name :"], .Label[text="Author :"],
+.Label[text="Borrow Date :"], .Label[text="Return Date :"] {
+    margin-top: 12px;
+}
+
+/* Search Button styling */
+.Button.search {
+    background-color: #328AD7;
+    -fx-background-radius: 8px;
+    -fx-padding: 12px;
+    -fx-font-weight: bold;
+}
+
+.Button.search:hover {
+    background-color: #5a9bd5;
+}
+
+.Button.search:pressed {
+    background-color: #327bb3;
+}
+
+/* Overall layout and spacing adjustments */
+.AnchorPane > AnchorPane > AnchorPane {
+    padding-top: 50px;
+}
+
+.JFXTextField, .DatePicker {
+    margin-top: 10px;
+}
+
+.ButtonsContainer {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.Label,
+.JFXTextField,
+.DatePicker {
+    margin-top: 12px;
+}
+

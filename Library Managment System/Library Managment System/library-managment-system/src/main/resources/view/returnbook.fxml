@@ -12,14 +12,14 @@
 
 <AnchorPane prefHeight="686.0" prefWidth="701.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.librarymanagmentsystem.controller.ReturnBook.ReturnBookFormController">
    <children>
-      <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="708.0" prefWidth="688.0">
+      <AnchorPane layoutX="10.0" layoutY="-8.0" prefHeight="726.0" prefWidth="692.0">
          <children>
             <AnchorPane layoutX="10.0" layoutY="10.0" prefHeight="697.0" prefWidth="656.0">
                <children>
-                  <AnchorPane layoutX="-21.0" layoutY="10.0" prefHeight="686.0" prefWidth="701.0" style="-fx-background-color: #F5F7FA;">
+                  <AnchorPane layoutX="-21.0" layoutY="10.0" prefHeight="686.0" prefWidth="701.0" style="-fx-background-color: fad2e1;" stylesheets="@../css/style9.css">
                      <children>
-                        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#1976D2" height="100.0" layoutY="-31.0" width="701.0" />
-                        <Label layoutX="278.0" layoutY="6.0" text="Return Book" textFill="WHITE">
+                        <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#59115c" height="86.0" layoutY="-17.0" width="702.0" />
+                        <Label layoutX="265.0" layoutY="21.0" text="Return Book" textFill="WHITE">
                            <font>
                               <Font name="Segoe UI Bold" size="24.0" />
                            </font>
@@ -29,25 +29,25 @@
                               <Font size="8.0" />
                            </font>
                         </Label>
-                        <Button layoutX="409.0" layoutY="113.0" mnemonicParsing="false" onAction="#btnMemberSearchOnAction" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: green; -fx-text-fill: white; -fx-font-size: 14;" text="Search" />
+                        <Button layoutX="402.0" layoutY="180.0" mnemonicParsing="false" onAction="#btnMemberSearchOnAction" prefHeight="30.0" prefWidth="230.0" style="-fx-background-color: #208ad2; -fx-text-fill: white; -fx-font-size: 14;" text="Search" />
                         <JFXTextField fx:id="memberIdTxtxField" layoutX="217.0" layoutY="110.0" prefHeight="26.0" prefWidth="160.0" />
-                        <JFXTextField fx:id="memberNameTxtField" layoutX="218.0" layoutY="172.0" prefHeight="26.0" prefWidth="160.0" />
-                        <JFXTextField fx:id="memberContactTxtField" layoutX="478.0" layoutY="174.0" prefHeight="26.0" prefWidth="160.0" />
-                        <Label layoutX="95.0" layoutY="182.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14; -fx-text-fill: #333333;" text="Member Name :">
+                        <JFXTextField fx:id="memberNameTxtField" layoutX="507.0" layoutY="115.0" prefHeight="26.0" prefWidth="160.0" />
+                        <JFXTextField fx:id="memberContactTxtField" layoutX="176.0" layoutY="167.0" prefHeight="26.0" prefWidth="160.0" />
+                        <Label layoutX="384.0" layoutY="125.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14; -fx-text-fill: #333333;" text="Member Name :">
                            <font>
                               <Font size="8.0" />
                            </font>
                         </Label>
-                        <Label layoutX="400.0" layoutY="184.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14; -fx-text-fill: #333333;" text="Contact :">
+                        <Label layoutX="98.0" layoutY="177.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14; -fx-text-fill: #333333;" text="Contact :">
                            <font>
                               <Font size="8.0" />
                            </font>
                         </Label>
                         <TableView fx:id="tblBookReturn" layoutX="28.0" layoutY="388.0" prefHeight="255.0" prefWidth="651.0" style="-fx-background-color: white; -fx-border-color: #DADADA;">
                            <columns>
-                              <TableColumn fx:id="bookIdCol" prefWidth="143.19995880126953" text="BookId" />
-                              <TableColumn fx:id="borrowDateCol" minWidth="1.5999755859375" prefWidth="233.60003662109375" text="Borrow Date" />
-                              <TableColumn fx:id="returnDateCol" prefWidth="181.59988403320312" text="Return Date" />
+                              <TableColumn fx:id="bookIdCol" prefWidth="136.79998397827148" text="BookId" />
+                              <TableColumn fx:id="borrowDateCol" minWidth="1.5999755859375" prefWidth="274.40003967285156" text="Borrow Date" />
+                              <TableColumn fx:id="returnDateCol" prefWidth="238.4000244140625" text="Return Date" />
                            </columns>
                         </TableView>
                         <ComboBox fx:id="selectBookComboTxt" layoutX="209.0" layoutY="269.0" onAction="#showFineOnAction" prefWidth="150.0" />
@@ -56,9 +56,9 @@
                               <Font size="8.0" />
                            </font>
                         </Label>
-                        <Button layoutX="231.0" layoutY="328.0" mnemonicParsing="false" onAction="#btnShowFineOnAction" prefHeight="30.0" prefWidth="137.0" style="-fx-background-color: red; -fx-text-fill: white; -fx-font-size: 14;" text="Show Fine" />
-                        <JFXTextField fx:id="fineTxtField" layoutX="402.0" layoutY="265.0" prefHeight="26.0" prefWidth="160.0" />
-                        <Button layoutX="410.0" layoutY="328.0" mnemonicParsing="false" onAction="#btnPayNowOnAction" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: green; -fx-text-fill: white; -fx-font-size: 14;" text="Pay Now" />
+                        <Button layoutX="236.0" layoutY="328.0" mnemonicParsing="false" onAction="#btnShowFineOnAction" prefHeight="30.0" prefWidth="137.0" style="-fx-background-color: #46576b; -fx-text-fill: white; -fx-font-size: 14;" text="Show Fine" />
+                        <JFXTextField fx:id="fineTxtField" layoutX="391.0" layoutY="268.0" prefHeight="26.0" prefWidth="160.0" />
+                        <Button layoutX="471.0" layoutY="328.0" mnemonicParsing="false" onAction="#btnPayNowOnAction" prefHeight="30.0" prefWidth="142.0" style="-fx-background-color: #c91561; -fx-text-fill: white; -fx-font-size: 14;" text="Pay Now" />
                      </children>
                   </AnchorPane>
                </children>

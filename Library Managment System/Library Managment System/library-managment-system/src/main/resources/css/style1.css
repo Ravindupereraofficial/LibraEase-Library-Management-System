@@ -1,0 +1,114 @@
+ /* General Styles */
+ * {
+     -fx-font-family: "Poppins", sans-serif;
+ }
+
+ /* Background for the right-side login form */
+ .login-form {
+     -fx-background-color: linear-gradient(to bottom right, #ffffff, #f3f3f3);
+     -fx-padding: 40px;
+     -fx-border-radius: 10px;
+     -fx-alignment: center;
+ }
+
+ /* App Branding */
+ .app-brand {
+     -fx-text-fill: #6a0572;
+     -fx-font-size: 24px;
+     -fx-font-weight: bold;
+ }
+
+ /* Welcome Text */
+ .welcome-text {
+     -fx-text-fill: #2c0b2e;
+     -fx-font-size: 20px;
+     -fx-font-weight: bold;
+ }
+
+ /* Input Fields */
+ .login-field {
+     -fx-pref-width: 280px;
+     -fx-pref-height: 45px;
+     -fx-background-radius: 8px;
+     -fx-border-radius: 8px;
+     -fx-padding: 10px;
+     -fx-border-color: #6a0572;
+     -fx-border-width: 1.5px;
+     -fx-font-size: 14px;
+     -fx-background-color: #ffffff;
+     -fx-text-fill: #333333;
+ }
+
+ /* Hover effect on input fields */
+ .login-field:focused {
+     -fx-border-color: #9c27b0;
+     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 8, 0, 0, 4);
+ }
+
+ /* Login Button */
+ .login-button {
+     -fx-pref-width: 280px;
+     -fx-pref-height: 45px;
+     -fx-background-radius: 8px;
+     -fx-border-radius: 8px;
+     -fx-background-color: linear-gradient(to right, #6a0572, #9c27b0);
+     -fx-text-fill: white;
+     -fx-font-size: 16px;
+     -fx-font-weight: bold;
+     -fx-cursor: hand;
+     -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 8, 0, 0, 4);
+ }
+
+ /* Button hover effect */
+ .login-button:hover {
+     -fx-background-color: linear-gradient(to right, #9c27b0, #d81b60);
+ }
+
+ /* Forgot Password */
+ .forgot-password {
+     -fx-text-fill: #6a0572;
+     -fx-font-size: 14px;
+     -fx-underline: true;
+     -fx-cursor: hand;
+ }
+
+ /* Forgot password hover effect */
+ .forgot-password:hover {
+     -fx-text-fill: #9c27b0;
+ }
+
+ /* Signup Button */
+ .signup-button {
+     -fx-pref-width: 280px;
+     -fx-pref-height: 45px;
+     -fx-background-radius: 8px;
+     -fx-border-radius: 8px;
+     -fx-background-color: transparent;
+     -fx-border-color: #9c27b0;
+     -fx-border-width: 2px;
+     -fx-text-fill: #9c27b0;
+     -fx-font-size: 16px;
+     -fx-font-weight: bold;
+     -fx-cursor: hand;
+ }
+
+ /* Signup button hover effect */
+ .signup-button:hover {
+     -fx-background-color: #9c27b0;
+     -fx-text-fill: white;
+ }
+
+ /* Animated Book Management System Title */
+ .label {
+     -fx-animation: fadeIn 2s ease-in-out infinite alternate;
+ }
+
+ /* Fade-In Animation */
+ @keyframes fadeIn {
+     from {
+         -fx-opacity: 0.5;
+     }
+     to {
+         -fx-opacity: 1;
+     }
+ }

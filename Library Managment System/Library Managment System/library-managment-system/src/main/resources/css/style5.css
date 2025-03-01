@@ -1,0 +1,126 @@
+/* General styling for the background of the AnchorPane */
+.root {
+    -fx-background-color: #f5f5f5;
+    -fx-font-family: 'Poppins', sans-serif;
+    -fx-padding: 20px;
+}
+
+/* Styling for the Labels to give a clean modern look */
+Label {
+    -fx-font-size: 16px;
+    -fx-text-fill: #4d4d4d;
+    -fx-font-weight: regular;
+}
+
+/* User Info Section */
+.Label {
+    -fx-text-fill: #333333;
+    -fx-font-size: 24px;
+    -fx-font-weight: bold;
+}
+
+/* Styling for time and date labels */
+#lblNowTime, #lblNowDate {
+    -fx-text-fill: #be2582;
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+}
+
+/* Styling for rectangle background */
+.Rectangle {
+    -fx-fill: linear-gradient(to right, #f7b3f6, #f7b3f6);
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.2), 10, 0, 0, 5);
+}
+
+/* Styling for the "Overdue Books" label */
+#overDueBooksCounttxt {
+    -fx-text-fill: #ff4d4d;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+/* Stats Section */
+.VBox {
+    -fx-spacing: 15px;
+}
+
+/* Styling for the "Total Fines Collected" section */
+#totallFineTxt, #unpaidFineTxt {
+    -fx-text-fill: #4eaf0d;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+/* Styling for the "Total Customers" and "All Book Count" labels */
+#totalCustomerCounttxt, #allBookCounttxt {
+    -fx-text-fill: #338fdb;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+}
+
+/* Styling for all the boxes */
+.Rectangle {
+    -fx-background-radius: 15;
+    -fx-stroke: transparent;
+}
+
+/* Styling the background for each VBox to make it stand out */
+.VBox {
+    -fx-background-radius: 15px;
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.2), 10, 0, 0, 10);
+    -fx-padding: 15px;
+    -fx-border-radius: 15px;
+}
+
+/* Styling the rectangle background to be softer */
+.Rectangle {
+    -fx-background-radius: 10px;
+}
+
+/* Styling the small labels to differentiate them */
+Label[style*='-fx-font-size: 16;'] {
+    -fx-font-size: 16px;
+    -fx-font-weight: normal;
+    -fx-text-fill: #666;
+}
+
+/* Hover effects for the labels when they are hovered */
+Label:hover {
+    -fx-text-fill: #be2582;
+    -fx-cursor: hand;
+}
+
+/* Special Styling for labels indicating total counts */
+.Label[style*='-fx-font-weight: bold;'] {
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #59115c;
+}
+
+/* Styling for specific important stats (Overdue Books, Total Fines) */
+#overDueBooksCounttxt, #totallFineTxt {
+    -fx-text-fill: #ff5f57;
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+}
+
+#unpaidFineTxt {
+    -fx-text-fill: #ff851b;
+}
+
+/* Specific styling for label icons */
+#overDueBooksCounttxt::before {
+    content: "📚 ";
+    font-size: 18px;
+}
+
+#totallFineTxt::before {
+    content: "💰 ";
+    font-size: 18px;
+}
+
+#unpaidFineTxt::before {
+    content: "💸 ";
+    font-size: 18px;
+}

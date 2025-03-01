@@ -1,0 +1,40 @@
+/* General styling for the background */
+.root {
+    -fx-background-color: #F4F6F9;
+}
+
+/* Styling for the side navigation pane */
+.pane {
+    -fx-background-color: #59115c;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 5);
+}
+
+/* Styling for the buttons */
+.jfx-button {
+    -fx-background-color: #be2582;
+    -fx-text-fill: white;
+    -fx-background-radius: 8px;
+    -fx-padding: 10px;
+    -fx-pref-height: 41px;
+    -fx-pref-width: 197px;
+}
+
+/* Button hover effect */
+.jfx-button:hover {
+    -fx-background-color: #9a1c6c;
+}
+
+/* Label styling for log out */
+#logOutTxt {
+    -fx-text-fill: #be2582;
+    -fx-font-size: 12px;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+/* Label styling for title */
+#title {
+    -fx-text-fill: white;
+    -fx-font-family: "Candara Bold";
+    -fx-font-size: 18px;
+}

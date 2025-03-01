@@ -12,7 +12,7 @@ public class DBConnection {
     private final String password = "1234";
 
     private DBConnection() {
-        // Private constructor to enforce singleton pattern
+
     }
 
     public static DBConnection getInstance() {
@@ -23,7 +23,7 @@ public class DBConnection {
     }
 
     public Connection getConnection() throws SQLException {
-        // Create a new connection for each call
+
         return DriverManager.getConnection(URL, userName, password);
     }
 }

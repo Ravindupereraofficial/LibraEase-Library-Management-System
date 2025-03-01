@@ -1,0 +1,121 @@
+/* General Styling */
+* {
+    -fx-font-family: 'Segoe UI', sans-serif;
+    -fx-font-size: 14px;
+}
+
+/* AnchorPane */
+.anchor-pane {
+    -fx-background-color: #f4f8ff;
+}
+
+/* Left Side - Background Image */
+.anchor-pane > .children {
+    -fx-background-size: cover;
+    -fx-background-position: center;
+}
+
+.anchor-pane > .children > .rectangle {
+    -fx-fill: #59115c;
+    -fx-arc-width: 5.0;
+    -fx-arc-height: 5.0;
+    -fx-stroke: black;
+    -fx-stroke-type: inside;
+}
+
+/* Header Label */
+.label {
+    -fx-text-fill: white;
+    -fx-font-family: 'Ebrima', 'Segoe UI', sans-serif;
+    -fx-font-size: 30px;
+    -fx-font-weight: bold;
+}
+
+/* Right Side: Sign-Up Form */
+.vbox {
+    -fx-background-color: #f4f8ff;
+    -fx-border-radius: 15px;
+    -fx-padding: 40px;
+    -fx-spacing: 20px;
+    -fx-effect: dropshadow(gaussian, #000000, 8, 0.5, 0, 5);
+    -fx-background-radius: 15px;
+}
+
+/* Title */
+.vbox > .label {
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333;
+    -fx-margin-bottom: 15px;
+}
+
+/* Form Field Labels */
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+    -fx-font-weight: normal;
+}
+
+/* Text Fields */
+.jfx-text-field {
+    -fx-pref-width: 280px;
+    -fx-background-radius: 5px;
+    -fx-background-color: #fff;
+    -fx-border-color: #d4d4d4;
+    -fx-border-width: 1px;
+    -fx-padding: 10px;
+    -fx-font-size: 14px;
+}
+
+.jfx-text-field:focused {
+    -fx-border-color: #208ad2;
+    -fx-background-color: #f1f8ff;
+}
+
+/* Buttons */
+.jfx-button {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-pref-width: 280px;
+    -fx-padding: 10px;
+    -fx-border-radius: 5px;
+    -fx-text-fill: white;
+    -fx-effect: dropshadow(gaussian, #000000, 8, 0.3, 0, 2);
+}
+
+/* Sign-Up Button */
+.jfx-button:default {
+    -fx-background-color: #d20d4d;
+}
+
+.jfx-button:default:hover {
+    -fx-background-color: #c81341;
+}
+
+/* Login Button */
+.jfx-button#btnLoginUpOnAction {
+    -fx-text-fill: #800040;
+    -fx-background-color: transparent;
+    -fx-border-color: #800040;
+    -fx-border-width: 2px;
+}
+
+.jfx-button#btnLoginUpOnAction:hover {
+    -fx-background-color: #f0e6f5;
+}
+
+/* HBox - Left and Right Sections */
+.hbox {
+    -fx-spacing: 0;
+    -fx-alignment: center;
+}
+
+/* Text Field and Button Styling on Hover */
+.jfx-text-field:hover {
+    -fx-border-color: #208ad2;
+    -fx-background-color: #f9f9f9;
+}
+
+.jfx-button:hover {
+    -fx-background-color: #5c4b8e;
+}

@@ -86,7 +86,7 @@ public class MemberServiceImpl implements MemberService {
     private String generateNextMemberID(String lastMemberID) {
         int lastNumber = Integer.parseInt(lastMemberID.substring(1));
         int nextNumber = lastNumber + 1;
-        return String.format("M%04d", nextNumber);
+        return String.format("C%03d", nextNumber);
     }
 
     private MemberEntity convertToEntity(Member member) {

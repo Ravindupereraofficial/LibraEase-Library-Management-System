@@ -1,71 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<?import javafx.scene.layout.HBox?>
-<?import java.net.URL?>
-<AnchorPane prefHeight="686.0" prefWidth="701.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.librarymanagmentsystem.controller.detailscontroller.DetailsController">
-    <stylesheets>
-        <URL value="@style.css" />
-    </stylesheets>
-
+<AnchorPane prefHeight="686.0" prefWidth="701.0" style="-fx-background-color: fad2e1;" stylesheets="@../css/style5.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.librarymanagmentsystem.controller.detailscontroller.DetailsController">
     <children>
-        <!-- Header Section -->
-        <VBox layoutX="30" layoutY="20" spacing="5">
-            <Label text="Hi! Good Morning!" styleClass="greeting-text" />
-            <Label text="Minindu Alwis" styleClass="user-name" />
-        </VBox>
+        <!-- User Info -->
+        <Label layoutX="30.0" layoutY="30.0" style="-fx-font-size: 14; -fx-text-fill: gray;" />
+        <Label layoutX="30.0" layoutY="32.0" style="-fx-font-size: 24; -fx-font-weight: bold;" text="Dimantha Theekshana" />
 
-        <Label layoutX="440.0" layoutY="40.0" styleClass="role-label" text="📌 Role: Library Admin / POS Operator" />
+        <!-- Stats -->
+        <VBox layoutX="30.0" layoutY="170.0" spacing="10" />
 
-        <!-- Time and Date Display -->
-        <VBox layoutX="30" layoutY="100" spacing="15">
-            <HBox spacing="10">
-                <Label text="⏰ Time - " styleClass="time-date-label" />
-                <Label fx:id="lblNowTime" text="00 : 00 : 00" styleClass="time-date-value" />
-            </HBox>
-            <HBox spacing="10">
-                <Label text="📅  Date - " styleClass="time-date-label" />
-                <Label fx:id="lblNowDate" text="00 : 00 : 00" styleClass="time-date-value" />
-            </HBox>
-        </VBox>
+        <!-- Fines Collected -->
+        <VBox layoutX="30.0" layoutY="316.0" spacing="5" />
 
-        <!-- Stats Cards -->
-        <VBox layoutX="30" layoutY="170" spacing="20">
-            <HBox spacing="20">
-                <!-- Overdue Books Card -->
-                <VBox styleClass="card">
-                    <Label text="📊 Overdue Books" styleClass="card-title" />
-                    <Label fx:id="overDueBooksCounttxt" text="0" styleClass="card-value" />
-                </VBox>
-
-                <!-- Total Customers Card -->
-                <VBox styleClass="card">
-                    <Label text="👥 Total Customers" styleClass="card-title" />
-                    <Label fx:id="totalCustomerCounttxt" text="0" styleClass="card-value" />
-                </VBox>
-
-                <!-- Book Count Card -->
-                <VBox styleClass="card">
-                    <Label text="📚 All Book Count" styleClass="card-title" />
-                    <Label fx:id="allBookCounttxt" text="0" styleClass="card-value" />
-                </VBox>
-            </HBox>
-
-            <!-- Fines Collected Card -->
-            <VBox styleClass="wide-card">
-                <Label text="💰 Total Fines Collected" styleClass="wide-card-title" />
-                <Label fx:id="totallFineTxt" text="000000.00" styleClass="wide-card-value" />
-            </VBox>
-
-            <!-- Not Returned Books Card -->
-            <VBox styleClass="wide-card">
-                <Label text="📚 Not Returned Book Count" styleClass="wide-card-title" />
-                <Label fx:id="unpaidFineTxt" text="000000.00" styleClass="wide-card-value" />
-            </VBox>
-        </VBox>
+        <!-- New Customers -->
+        <VBox layoutX="400.0" layoutY="170.0" spacing="10" />
+      <Label layoutX="47.0" layoutY="105.0" text="⏰ Time - ">
+         <font>
+            <Font name="Poppins Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="250.0" layoutY="105.0" text="📅  Date - ">
+         <font>
+            <Font name="Poppins Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNowTime" layoutX="133.0" layoutY="105.0" text="00 : 00 : 00">
+         <font>
+            <Font name="Poppins Bold" size="16.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNowDate" layoutX="340.0" layoutY="105.0" text="00 : 00 : 00">
+         <font>
+            <Font name="Poppins Bold" size="16.0" />
+         </font>
+      </Label>
+      <Rectangle arcHeight="5.0" fill="#f7b3f6" height="35.0" layoutX="240.0" layoutY="183.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+         <Label layoutX="82.0" layoutY="188.0" style="-fx-font-size: 16;" text="📊 Overdue Books   : ">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <Label fx:id="overDueBooksCounttxt" layoutX="335.0" layoutY="188.0" style="-fx-font-size: 16;" text="0" />
+      <Rectangle arcHeight="5.0" fill="#f7b3f6" height="35.0" layoutX="268.0" layoutY="290.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+      <Label fx:id="totalCustomerCounttxt" layoutX="358.0" layoutY="295.0" style="-fx-font-size: 16;" text="0" />
+      <Rectangle arcHeight="5.0" fill="#f7b3f6" height="35.0" layoutX="258.0" layoutY="392.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="200.0" />
+      <Label fx:id="allBookCounttxt" layoutX="335.0" layoutY="397.0" style="-fx-font-size: 16;" text="0" />
+         <Label layoutX="84.0" layoutY="295.0" style="-fx-font-size: 16;-fx-font-weight: bold;" text="👥 Total Customers  :   " />
+         <Label layoutX="88.0" layoutY="397.0" style="-fx-font-size: 16;-fx-font-weight: bold;" text="📚 All Book Count  : " />
+      <Rectangle arcHeight="5.0" fill="#f7b3f6" height="35.0" layoutX="281.0" layoutY="497.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="318.0" />
+         <Label layoutX="52.0" layoutY="501.0" style="-fx-font-size: 18; -fx-font-weight: bold;" text="💰 Total Fines Collected   : " />
+      <Label fx:id="totallFineTxt" layoutX="368.0" layoutY="501.0" style="-fx-font-size: 18; -fx-font-weight: bold;" text="000000.00" />
+      <Rectangle arcHeight="5.0" fill="#f7b3f6" height="35.0" layoutX="296.0" layoutY="598.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="251.0" />
+      <Label layoutX="17.0" layoutY="602.0" style="-fx-font-size: 18; -fx-font-weight: bold;" text="💰 Not Retruned Book Count   : " />
+      <Label fx:id="unpaidFineTxt" layoutX="378.0" layoutY="602.0" style="-fx-font-size: 18; -fx-font-weight: bold;" text="000000.00" />
     </children>
 </AnchorPane>

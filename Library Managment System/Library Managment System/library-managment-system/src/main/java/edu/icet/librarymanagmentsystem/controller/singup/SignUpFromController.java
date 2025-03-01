@@ -79,7 +79,7 @@ public class SignUpFromController implements Initializable{
     }
 
     public void getUserID() throws SQLException {
-        String userId = signUpService.genarateuserID();  // Corrected method name here
+        String userId = signUpService.genarateuserID();
         txtUserID.setText(userId);
     }
 
