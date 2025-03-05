@@ -4,66 +4,25 @@
 <?import com.jfoenix.controls.JFXPasswordField?>
 <?import com.jfoenix.controls.JFXTextField?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.StackPane?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.shape.Rectangle?>
-<?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="550.0" prefWidth="750.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.librarymanagmentsystem.controller.login.LoginFormController">
    <stylesheets>
-      
+
    </stylesheets>
    <children>
       <HBox prefHeight="550.0" prefWidth="750.0" spacing="0">
          <children>
-            <!-- Left Side: Auto-Sliding Image Gallery -->
-            <StackPane prefWidth="400.0">
-               <children>
-                  <!-- Background Image centered -->
-                  <ImageView fx:id="imageView" fitHeight="550.0" fitWidth="400.0" preserveRatio="true" StackPane.alignment="CENTER" />
-
-                  <!-- Rectangle Overlay -->
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="linear-gradient(to bottom right, #59115c, #2c0b2e)" height="548.0" stroke="BLACK" strokeType="INSIDE" width="398.0" />
-
-                  <!-- VBox containing Label and Image -->
-                  <VBox alignment="TOP_CENTER" prefWidth="400.0" spacing="20">
-
-                     <StackPane alignment="CENTER" />
-                     <Label styleClass="title-label" text="Book Management System" textFill="WHITE">
-                        <font>
-                           <Font name="System Bold" size="31.0" />
-                        </font></Label>
-                  </VBox>
-               </children>
-            </StackPane>
-            
-            <!-- Right Side: Login Form -->
-            <VBox alignment="CENTER" prefWidth="350.0" spacing="15.0" style="-fx-background-radius: 999px; -fx-background-color: fad2e1;" styleClass="login-form" stylesheets="@../css/style1.css">
-               <children>
-                  <!-- App Branding -->
-                  <Label styleClass="app-brand" />
-
-                  <Label styleClass="welcome-text" text="Welcome..." />
-
-                  <JFXTextField fx:id="emailTxtField" promptText="Email" styleClass="login-field" />
-                  <JFXPasswordField fx:id="passwordTxtField" promptText="Password" styleClass="login-field" />
-
-                  <JFXButton onAction="#btnLoginOnAction" style="-fx-background-radius: 100px;" styleClass="login-button" text="Login" />
+            <JFXButton onAction="#btnSignUpOnAction" style="-fx-background-radius: 100px;" styleClass="signup-button" text="Create an account" />
 
                   <Label onMouseClicked="#fogotPasswordBtnOnAction" styleClass="forgot-password" text="Forgot your password...?" />
-                  <JFXButton onAction="#btnSignUpOnAction" style="-fx-background-radius: 100px;" styleClass="signup-button" text="Create an account" />
-               </children>
-            </VBox>
+
+                        <JFXTextField fx:id="emailTxtField" promptText="Email" styleClass="login-field" />
+            <JFXPasswordField fx:id="passwordTxtField" promptText="Password" styleClass="login-field" />
+
+                  <JFXButton onAction="#btnLoginOnAction" style="-fx-background-radius: 100px;" styleClass="login-button" text="Login" />
          </children>
       </HBox>
-      <ImageView fitHeight="297.0" fitWidth="318.0" layoutX="42.0" layoutY="159.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@../images/login2.jpg" />
-         </image>
-      </ImageView>
    </children>
 </AnchorPane>
