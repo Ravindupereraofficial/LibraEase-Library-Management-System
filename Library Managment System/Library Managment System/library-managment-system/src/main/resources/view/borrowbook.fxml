@@ -12,61 +12,34 @@
    <children>
       <AnchorPane layoutX="10.0" layoutY="-10.0" prefHeight="717.0" prefWidth="716.0">
          <children>
-            <AnchorPane layoutX="-10.0" layoutY="8.0" prefHeight="688.0" prefWidth="726.0" style="-fx-background-color: fad2e1;" stylesheets="@../css/style3.css">
+            <AnchorPane layoutX="-10.0" layoutY="8.0" prefHeight="688.0" prefWidth="726.0" style="-fx-background-color: #E6F0FA;" stylesheets="@../css/style3.css">
                <children>
-                  <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#59115c" height="78.0" layoutY="-1.0" width="725.0" />
-                  <Label layoutX="282.0" layoutY="23.0" text="Borrow Book" textFill="WHITE">
-                     <font>
-                        <Font name="Segoe UI Bold" size="30.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="83.0" layoutY="129.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14; -fx-text-fill: #333333;" text="Member ID:">
-                     <font>
-                        <Font size="8.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="65.0" layoutY="469.0" prefHeight="18.0" prefWidth="90.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14; -fx-text-fill: #333333;" text="Borrow Date : " />
-                  <Button layoutX="282.0" layoutY="569.0" mnemonicParsing="false" onAction="#btnBorrowTheBookOnAction" prefHeight="38.0" prefWidth="171.0" style="-fx-background-color: #D7623D; -fx-text-fill: white; -fx-font-size: 14;" text="Borrow The Book">
+                  <Rectangle arcHeight="10.0" arcWidth="10.0" fill="#6C8EBF" height="78.0" layoutY="-1.0" width="725.0" />
+                  <Label layoutX="282.0" layoutY="23.0" text="Borrow Book" styleClass="title-text" />
+                  <Label layoutX="83.0" layoutY="129.0" styleClass="input-label" text="Member ID:" />
+                  <Label layoutX="65.0" layoutY="469.0" prefHeight="18.0" prefWidth="90.0" styleClass="input-label" text="Borrow Date : " />
+                  <Button layoutX="282.0" layoutY="569.0" mnemonicParsing="false" onAction="#btnBorrowTheBookOnAction" prefHeight="38.0" prefWidth="171.0" styleClass="btn-primary" text="Borrow The Book">
                      <font>
                         <Font name="Poppins Bold" size="24.0" />
-                     </font></Button>
-                  <DatePicker fx:id="returnDatePickerTxtField" layoutX="452.0" layoutY="464.0" prefHeight="30.0" prefWidth="230.0" />
-                  <Button layoutX="368.0" layoutY="200.0" mnemonicParsing="false" onAction="#btnMemberSearchOnAction" prefHeight="30.0" prefWidth="306.0" style="-fx-background-color: #328AD7; -fx-text-fill: white; -fx-font-size: 14;" text="Search" />
-                  <JFXTextField fx:id="memberIdTxtxField" layoutX="204.0" layoutY="119.0" prefHeight="26.0" prefWidth="160.0" />
-                  <JFXTextField fx:id="memberNameTxtField" layoutX="506.0" layoutY="124.0" prefHeight="26.0" prefWidth="160.0" />
-                  <JFXTextField fx:id="memberContactTxtField" layoutX="163.0" layoutY="189.0" prefHeight="26.0" prefWidth="160.0" />
-                  <Label layoutX="383.0" layoutY="134.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14; -fx-text-fill: #333333;" text="Member Name :">
-                     <font>
-                        <Font size="8.0" />
                      </font>
-                  </Label>
-                  <Label layoutX="85.0" layoutY="199.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14; -fx-text-fill: #333333;" text="Contact :">
-                     <font>
-                        <Font size="8.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="83.0" layoutY="303.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14; -fx-text-fill: #333333;" text="Book ID:">
-                     <font>
-                        <Font size="8.0" />
-                     </font>
-                  </Label>
-                  <Button layoutX="375.0" layoutY="380.0" mnemonicParsing="false" onAction="#btnsearchBookOnAction" prefHeight="30.0" prefWidth="306.0" style="-fx-background-color: #A255AF; -fx-text-fill: white; -fx-font-size: 14;" text="Search" />
-                  <JFXTextField fx:id="bookIdTxtField" layoutX="204.0" layoutY="293.0" prefHeight="26.0" prefWidth="160.0" />
-                  <JFXTextField fx:id="bookNameTxtField" layoutX="506.0" layoutY="298.0" prefHeight="26.0" prefWidth="160.0" />
-                  <JFXTextField fx:id="bookAutherTxtField" layoutX="160.0" layoutY="367.0" prefHeight="26.0" prefWidth="160.0" />
-                  <Label layoutX="383.0" layoutY="308.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14; -fx-text-fill: #333333;" text="Book Name :">
-                     <font>
-                        <Font size="8.0" />
-                     </font>
-                  </Label>
-                  <Label layoutX="84.0" layoutY="377.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14; -fx-text-fill: #333333;" text="Author :">
-                     <font>
-                        <Font size="8.0" />
-                     </font>
-                  </Label>
-                  <JFXTextField fx:id="borrowDateTxtField" layoutX="165.0" layoutY="464.0" prefHeight="26.0" prefWidth="160.0" />
-                  <Label layoutX="359.0" layoutY="472.0" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14; -fx-text-fill: #333333;" text="Return Date :" />
-                  <Button layoutX="535.0" layoutY="569.0" mnemonicParsing="false" onAction="#btnsReturnOnAction" prefHeight="38.0" prefWidth="138.0" style="-fx-background-color: navy blue; -fx-text-fill: white; -fx-font-size: 14;" text="Search" />
+                  </Button>
+                  <DatePicker fx:id="returnDatePickerTxtField" layoutX="452.0" layoutY="464.0" prefHeight="30.0" prefWidth="230.0" styleClass="date-picker" />
+                  <Button layoutX="368.0" layoutY="200.0" mnemonicParsing="false" onAction="#btnMemberSearchOnAction" prefHeight="30.0" prefWidth="306.0" styleClass="btn-secondary" text="Search" />
+                  <JFXTextField fx:id="memberIdTxtxField" layoutX="204.0" layoutY="119.0" prefHeight="26.0" prefWidth="160.0" styleClass="input-field" />
+                  <JFXTextField fx:id="memberNameTxtField" layoutX="506.0" layoutY="124.0" prefHeight="26.0" prefWidth="160.0" styleClass="input-field" />
+                  <JFXTextField fx:id="memberContactTxtField" layoutX="163.0" layoutY="189.0" prefHeight="26.0" prefWidth="160.0" styleClass="input-field" />
+                  <Label layoutX="383.0" layoutY="134.0" styleClass="input-label" text="Member Name :" />
+                  <Label layoutX="85.0" layoutY="199.0" styleClass="input-label" text="Contact :" />
+                  <Label layoutX="83.0" layoutY="303.0" styleClass="input-label" text="Book ID:" />
+                  <Button layoutX="375.0" layoutY="380.0" mnemonicParsing="false" onAction="#btnsearchBookOnAction" prefHeight="30.0" prefWidth="306.0" styleClass="btn-secondary" text="Search" />
+                  <JFXTextField fx:id="bookIdTxtField" layoutX="204.0" layoutY="293.0" prefHeight="26.0" prefWidth="160.0" styleClass="input-field" />
+                  <JFXTextField fx:id="bookNameTxtField" layoutX="506.0" layoutY="298.0" prefHeight="26.0" prefWidth="160.0" styleClass="input-field" />
+                  <JFXTextField fx:id="bookAutherTxtField" layoutX="160.0" layoutY="367.0" prefHeight="26.0" prefWidth="160.0" styleClass="input-field" />
+                  <Label layoutX="383.0" layoutY="308.0" styleClass="input-label" text="Book Name :" />
+                  <Label layoutX="84.0" layoutY="377.0" styleClass="input-label" text="Author :" />
+                  <JFXTextField fx:id="borrowDateTxtField" layoutX="165.0" layoutY="464.0" prefHeight="26.0" prefWidth="160.0" styleClass="input-field" />
+                  <Label layoutX="359.0" layoutY="472.0" styleClass="input-label" text="Return Date :" />
+                  <Button layoutX="535.0" layoutY="569.0" mnemonicParsing="false" onAction="#btnsReturnOnAction" prefHeight="38.0" prefWidth="138.0" styleClass="btn-secondary" text="Search" />
                </children>
             </AnchorPane>
          </children>
