@@ -2,91 +2,52 @@
 
 <?import com.jfoenix.controls.JFXButton?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="685.0" prefWidth="943.0" style="-fx-background-color: #F4F6F9;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.librarymanagmentsystem.controller.dashboard.DashboardFormController">
+<AnchorPane prefHeight="685.0" prefWidth="943.0" stylesheets="@dashboard.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.icet.librarymanagmentsystem.controller.dashboard.DashboardFormController">
     <children>
-        <Pane prefHeight="686.0" prefWidth="260.0" style="-fx-background-color: #59115c; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.3), 10, 0, 0, 5);">
+        <Pane prefHeight="686.0" prefWidth="260.0" styleClass="sidebar">
             <children>
+                <Label layoutX="13.0" layoutY="40.0" styleClass="logo-text" text="Book Management">
+                    <font>
+                        <Font name="Poppins Bold" size="18.0" />
+                    </font>
+                </Label>
 
-                <!-- Buttons with better spacing, color, and rounded corners -->
-                <JFXButton alignment="TOP_CENTER" layoutX="10.0" layoutY="122.0" onAction="#btnDashBoardOnAction" prefHeight="49.0" prefWidth="245.0" style="-fx-background-color: #be2582; -fx-text-fill: white; -fx-background-radius: 100px; -fx-padding: 10px;" text="Dashboard">
-                    <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" preserveRatio="true">
+                <!-- Navigation Buttons -->
+                <JFXButton layoutX="10.0" layoutY="122.0" onAction="#btnDashBoardOnAction" prefHeight="49.0" prefWidth="245.0" styleClass="nav-btn" text="Dashboard"/>
+                <JFXButton layoutX="8.0" layoutY="196.0" onAction="#btnBookManagmentOnAction" prefHeight="49.0" prefWidth="245.0" styleClass="nav-btn" text="Books Management"/>
+                <JFXButton layoutX="8.0" layoutY="271.0" onAction="#btnMemberManagmentOnAction" prefHeight="49.0" prefWidth="245.0" styleClass="nav-btn" text="Members Management"/>
+                <JFXButton layoutX="10.0" layoutY="344.0" onAction="#btnBorrowOnAction" prefHeight="49.0" prefWidth="245.0" styleClass="nav-btn" text="Borrow Books"/>
+                <JFXButton layoutX="7.0" layoutY="418.0" onAction="#btnReturnOnAction" prefHeight="49.0" prefWidth="245.0" styleClass="nav-btn" text="Return Books"/>
+                <JFXButton layoutX="10.0" layoutY="494.0" onAction="#btnReportsOnAction" prefHeight="49.0" prefWidth="245.0" styleClass="nav-btn" text="Reports"/>
 
-                        </ImageView>
-                    </graphic>
-               <font>
-                  <Font size="19.0" />
-               </font>
-                </JFXButton>
-                <JFXButton layoutX="8.0" layoutY="196.0" onAction="#btnBookManagmentOnAction" prefHeight="49.0" prefWidth="245.0" style="-fx-background-color: #be2582; -fx-text-fill: white; -fx-background-radius: 100px; -fx-padding: 10px;" text="Books Management">
-                    <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" preserveRatio="true">
-
-                        </ImageView>
-                    </graphic>
-               <font>
-                  <Font size="19.0" />
-               </font>
-                </JFXButton>
-                <JFXButton layoutX="10.0" layoutY="344.0" onAction="#btnBorrowOnAction" prefHeight="49.0" prefWidth="245.0" style="-fx-background-color: #be2582; -fx-text-fill: white; -fx-background-radius: 100px; -fx-padding: 10px;" text="Borrow Books">
-                    <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" preserveRatio="true">
-
-                        </ImageView>
-                    </graphic>
-               <font>
-                  <Font size="19.0" />
-               </font>
-                </JFXButton>
-                <JFXButton layoutX="7.0" layoutY="418.0" onAction="#btnReturnOnAction" prefHeight="49.0" prefWidth="245.0" style="-fx-background-color: #be2582; -fx-text-fill: white; -fx-background-radius: 100px; -fx-padding: 10px;" text="Return Books">
-                    <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" preserveRatio="true">
-
-                        </ImageView>
-                    </graphic>
-               <font>
-                  <Font size="19.0" />
-               </font>
-                </JFXButton>
-                <JFXButton layoutX="10.0" layoutY="494.0" onAction="#btnReportsOnAction" prefHeight="49.0" prefWidth="245.0" style="-fx-background-color: #be2582; -fx-text-fill: white; -fx-background-radius: 100px; -fx-padding: 10px;" text="Reports">
-                    <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" preserveRatio="true">
-
-                        </ImageView>
-                    </graphic>
-               <font>
-                  <Font size="19.0" />
-               </font>
-                </JFXButton>
-
-                <Label fx:id="logOutTxt" layoutX="98.0" layoutY="568.0" onMouseClicked="#logoutTxtOnAction" style="-fx-text-fill: black; -fx-font-size: 12px; -fx-font-weight: bold; cursor: hand;" text="Log Out">
-               <font>
-                  <Font size="18.0" />
-               </font></Label>
-            <Label layoutX="13.0" layoutY="40.0" text="Book Management Dashboard" textFill="WHITE">
-               <font>
-                  <Font name="Candara Bold" size="18.0" />
-               </font>
-            </Label>
-                <JFXButton layoutX="8.0" layoutY="271.0" onAction="#btnMemberManagmentOnAction" prefHeight="49.0" prefWidth="245.0" style="-fx-background-color: #be2582; -fx-text-fill: white; -fx-background-radius: 100px; -fx-padding: 10px;" text="Members Management">
-                    <graphic>
-                        <ImageView fitHeight="20.0" fitWidth="20.0" preserveRatio="true">
-
-                        </ImageView>
-                    </graphic>
-               <font>
-                  <Font size="19.0" />
-               </font>
-                </JFXButton>
+                <Label fx:id="logOutTxt" layoutX="95.0" layoutY="610.0" onMouseClicked="#logoutTxtOnAction" styleClass="logout-btn" text="Log Out">
+                    <font>
+                        <Font name="Poppins SemiBold" size="14.0" />
+                    </font>
+                </Label>
             </children>
         </Pane>
 
-        <AnchorPane fx:id="dashboardAnchorPaneId" layoutX="262.0" prefHeight="686.0" prefWidth="701.0" style="-fx-background-color: fad2e1; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);" stylesheets="@../css/style4.css" />
+        <AnchorPane fx:id="dashboardAnchorPaneId" layoutX="262.0" prefHeight="686.0" prefWidth="701.0" styleClass="main-content">
+            <children>
+                <Pane layoutX="50.0" layoutY="50.0" prefHeight="150.0" prefWidth="180.0" styleClass="card">
+                    <Label layoutX="20.0" layoutY="20.0" text="Total Books" styleClass="card-title"/>
+                    <Label layoutX="20.0" layoutY="70.0" text="500" styleClass="card-value"/>
+                </Pane>
+                <Pane layoutX="250.0" layoutY="50.0" prefHeight="150.0" prefWidth="180.0" styleClass="card">
+                    <Label layoutX="20.0" layoutY="20.0" text="Total Members" styleClass="card-title"/>
+                    <Label layoutX="20.0" layoutY="70.0" text="150" styleClass="card-value"/>
+                </Pane>
+                <Pane layoutX="450.0" layoutY="50.0" prefHeight="150.0" prefWidth="180.0" styleClass="card">
+                    <Label layoutX="20.0" layoutY="20.0" text="Books Borrowed" styleClass="card-title"/>
+                    <Label layoutX="20.0" layoutY="70.0" text="75" styleClass="card-value"/>
+                </Pane>
+            </children>
+        </AnchorPane>
     </children>
 </AnchorPane>

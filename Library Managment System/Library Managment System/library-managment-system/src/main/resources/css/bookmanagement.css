@@ -1,20 +1,21 @@
 /* book-management.css */
 .root {
-    -primary-color: #96C291;
-    -secondary-color: #FFDBAA;
-    -background-color: #F4EEEE;
+    -primary-color: #6C8EBF; /* Soft Periwinkle Blue */
+    -secondary-color: #fcedf5; /* Lighter shade of the provided color */
+    -background-color: #faf5f2; /* Lighter shade of the provided color */
     -text-color: #333333;
+    -fx-font-family: 'Poppins';
 }
 
 .header {
-    -fx-background-color: -primary-color;
+    -fx-background-color: #fcedf5;
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 10,0,0,3);
 }
 
 .title-text {
     -fx-text-fill: white;
-    -fx-font-size: 24px;
-    -fx-font-family: 'Segoe UI Bold';
+    -fx-font-size: 36px;
+    -fx-font-family: 'Poppins Bold';
     -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.1), 3,0,0,1);
 }
 
@@ -24,11 +25,12 @@
     -fx-border-radius: 4px;
     -fx-padding: 8px;
     -fx-font-size: 14px;
+    -fx-font-family: 'Poppins';
 }
 
 .input-label {
     -fx-text-fill: -text-color;
-    -fx-font-family: 'Segoe UI';
+    -fx-font-family: 'Poppins';
     -fx-font-size: 14px;
 }
 
@@ -39,6 +41,7 @@
     -fx-padding: 8px 16px;
     -fx-border-radius: 4px;
     -fx-cursor: hand;
+    -fx-font-family: 'Poppins';
 }
 
 .btn-primary:hover {
@@ -52,6 +55,7 @@
     -fx-padding: 8px 16px;
     -fx-border-radius: 4px;
     -fx-cursor: hand;
+    -fx-font-family: 'Poppins';
 }
 
 .btn-secondary:hover {
@@ -69,6 +73,12 @@
     -fx-background-color: -primary-color;
     -fx-text-fill: white;
     -fx-font-weight: bold;
+    -fx-font-family: 'Poppins';
+}
+
+.table-row-cell:filled:selected {
+    -fx-background-color: -secondary-color;
+    -fx-text-fill: -text-color;
 }
 
 .combo-box {
@@ -76,6 +86,7 @@
     -fx-border-color: #DADADA;
     -fx-border-radius: 4px;
     -fx-padding: 8px;
+    -fx-font-family: 'Poppins';
 }
 
 .shadow-effect {
