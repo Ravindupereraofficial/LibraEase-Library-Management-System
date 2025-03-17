@@ -16,36 +16,31 @@
       <HBox prefHeight="550.0" prefWidth="750.0" spacing="0">
          <children>
             <!-- Left Side: Background Image -->
-            <AnchorPane prefWidth="400.0" style="-fx-background-image: url('/images/8.jpg'); -fx-background-size: cover; -fx-background-position: center;">
+            <AnchorPane prefHeight="563.0" prefWidth="370.0" style="-fx-background-image: url('/images/8.jpg'); -fx-background-size: cover; -fx-background-position: center;">
                <children>
-                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#91C8E4" height="557.0" layoutX="-5.0" layoutY="-3.0" stroke="BLACK" strokeType="INSIDE" width="400.0" />
-                  <Label layoutX="1.0" layoutY="30.0" text="Book Management System" textFill="WHITE">
-                     <font>
-                        <Font name="Ebrima Bold" size="30.0" />
-                     </font>
-                  </Label>
-                  <ImageView fitHeight="377.0" fitWidth="284.0" layoutX="69.0" layoutY="131.0" pickOnBounds="true" preserveRatio="true">
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#91C8E4" height="557.0" layoutX="-5.0" layoutY="-3.0" strokeType="INSIDE" width="372.0" />
+                  <ImageView fitHeight="557.0" fitWidth="444.0" layoutX="-3.0" layoutY="-1.0" pickOnBounds="true" preserveRatio="true">
                      <image>
-                        <Image url="@../images/signin2.PNG" />
+                        <Image url="@../images/1.jpg" />
                      </image>
                   </ImageView>
                </children>
             </AnchorPane>
 
             <!-- Right Side: Sign-Up Form -->
-            <VBox alignment="CENTER" prefWidth="350.0" spacing="15.0" style="-fx-background-color: #BFD7ED; -fx-background-radius: 10px; -fx-padding: 40px; -fx-border-radius: 10px;" stylesheets="@../css/style10.css">
+            <VBox alignment="CENTER" prefHeight="557.0" prefWidth="404.0" spacing="15.0" style="-fx-background-color: #e4f5fa; -fx-padding: 40px; -fx-border-radius: 10px;" stylesheets="@../css/style10.css">
                <children>
 
-                  <Label style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Create a New Account" />
+                  <Label prefHeight="34.0" prefWidth="301.0" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #333;" text="Create Your  New Account Here" textFill="#e4f5fad9" />
 
                   <!-- Form Fields -->
-                  <Label fx:id="txtUserID" style="-fx-font-size: 14px;" text="User ID - U000#" />
+                  <Label fx:id="txtUserID" prefHeight="20.0" prefWidth="295.0" style="-fx-font-size: 14px;" text="User ID - U000#" />
                   <JFXTextField fx:id="userNameTxtField" promptText="User Name" style="-fx-pref-width: 280px; -fx-background-radius: 5px;" />
                   <JFXTextField fx:id="gmailTxtField" promptText="Gmail" style="-fx-pref-width: 280px; -fx-background-radius: 5px;" />
                   <JFXTextField fx:id="passwordTxtField" promptText="Password" style="-fx-pref-width: 280px; -fx-background-radius: 5px;" />
 
-                  <JFXButton onAction="#btnSingUpOnAction" style="-fx-background-color: #5A9EC7; -fx-text-fill: white; -fx-pref-width: 280px; -fx-font-size: 14px; -fx-padding: 10px; -fx-border-radius: 5px;" text="Sign Up" />
-                  <JFXButton onAction="#btnLoginUpOnAction" style="-fx-text-fill: #3A7CA5; -fx-font-size: 20px;" text="Login">
+                  <JFXButton onAction="#btnSingUpOnAction" style="-fx-background-color: #5A9EC7; -fx-text-fill: white; -fx-pref-width: 280px; -fx-font-size: 20px; -fx-padding: 10px;" text="Sign Up" />
+                  <JFXButton onAction="#btnLoginUpOnAction" style="-fx-text-fill: white; -fx-font-size: 20px; -fx-background-color: #5A9EC7;" text="Login" textFill="#f4f0ff">
                      <font>
                         <Font size="20.0" />
                      </font>
